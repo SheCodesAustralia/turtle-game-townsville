@@ -54,4 +54,4 @@ One thing to watch out for: During the installation you will notice a window mar
 {{< /tabs >}}
 {{< /tabs >}}
 
-![Don't forget to add Python to the Path](content/Python/Python/03_getting_python_on_your_machine/1_python_installation/images/python-installation-options.png)
+![Don't forget to add Python to the Path](images/python-installation-options.png)
