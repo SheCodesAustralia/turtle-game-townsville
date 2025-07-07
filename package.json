@@ -3,3 +3,7 @@
     "hugo-cli": "^0.14.0"
   }
 }
+
+"scripts": {
+  "build": "hugo"
+}

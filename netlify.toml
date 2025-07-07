@@ -1,9 +1,10 @@
-[build.environment]
-GO_VERSION = "1.24.2"
-HUGO_VERSION = "0.147.9"
-NODE_VERSION = "22"
-TZ = "America/Los_Angeles"
-
 [build]
-publish = "public"
-command = "git config core.quotepath false && hugo --gc --minify"
+  publish = "public"
+  command = "hugo"
+
+[context.production.environment]
+  HUGO_VERSION = "0.125.4" # use the version you want
+
+  [build]
+  publish = "public"
+  command = "npm run build"
