@@ -4,7 +4,3 @@
 
 [context.production.environment]
   HUGO_VERSION = "0.125.4" # use the version you want
-
-  [build]
-  publish = "public"
-  command = "npm run build"
