@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en-au" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.147.9">
+    <meta name="generator" content="Relearn 7.6.1+4407b4364ab6f7477f7671fbd20c0494bade40ee">
+    <meta name="description" content="We need Python before we can start. If you don’t have Python installed yet, start by installing Python. Ideally we would like you to install the latest version of Python, however if you already have an earlier version installed that should work too! At a minimum, this tutorial requires Python 3.5.
+Check your version of Python We’re going to perform a simple experiment to check whether Python is already installed, and if it is, what version is installed.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Python installation :: She Codes One Day Workshop Tutorials (new)">
+    <meta name="twitter:description" content="We need Python before we can start. If you don’t have Python installed yet, start by installing Python. Ideally we would like you to install the latest version of Python, however if you already have an earlier version installed that should work too! At a minimum, this tutorial requires Python 3.5.
+Check your version of Python We’re going to perform a simple experiment to check whether Python is already installed, and if it is, what version is installed.">
+    <meta property="og:url" content="http://localhost:1313/python/python/03_getting_python_on_your_machine/1_python_installation/index.html">
+    <meta property="og:site_name" content="She Codes One Day Workshop Tutorials (new)">
+    <meta property="og:title" content="Python installation :: She Codes One Day Workshop Tutorials (new)">
+    <meta property="og:description" content="We need Python before we can start. If you don’t have Python installed yet, start by installing Python. Ideally we would like you to install the latest version of Python, however if you already have an earlier version installed that should work too! At a minimum, this tutorial requires Python 3.5.
+Check your version of Python We’re going to perform a simple experiment to check whether Python is already installed, and if it is, what version is installed.">
+    <meta property="og:locale" content="en_au">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Python installation :: She Codes One Day Workshop Tutorials (new)">
+    <meta itemprop="description" content="We need Python before we can start. If you don’t have Python installed yet, start by installing Python. Ideally we would like you to install the latest version of Python, however if you already have an earlier version installed that should work too! At a minimum, this tutorial requires Python 3.5.
+Check your version of Python We’re going to perform a simple experiment to check whether Python is already installed, and if it is, what version is installed.">
+    <meta itemprop="wordCount" content="435">
+    <title>Python installation :: She Codes One Day Workshop Tutorials (new)</title>
+    <link href="/python/python/03_getting_python_on_your_machine/1_python_installation/index.xml" rel="alternate" type="application/rss+xml" title="Python installation :: She Codes One Day Workshop Tutorials (new)">
+    <link href="/images/logo.png?1751868412" rel="icon" type="image/png">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751868412" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751868412" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1751868412" rel="stylesheet">
+    <link href="/css/theme.css?1751868412" rel="stylesheet">
+    <link href="/css/format-html.css?1751868412" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1751868412" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1751868412" defer></script>
+    <script src="/js/lunr/lunr.min.js?1751868412" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1751868412" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1751868412" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1751868412" defer></script>
+    <script src="/js/search.js?1751868412" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/python\/python\/03_getting_python_on_your_machine\/1_python_installation\/index.html';
+      window.relearn.relBasePath='..\/..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['en'];
+      window.relearn.index_js_url="/searchindex.en.js?1751868412";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'relearn-light', 'relearn-dark' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/python/python/03_getting_python_on_your_machine/1_python_installation/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#check-your-version-of-python">Check your version of Python</a></li>
+    <li><a href="#installation">Installation</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">She Codes One Day Workshop Tutorials (new)</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/python/index.html"><span itemprop="name">Python 101</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/python/python/03_getting_python_on_your_machine/index.html"><span itemprop="name">3. Getting Python on Your Machine</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Python installation</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/python/python/03_getting_python_on_your_machine/2_code_editor/index.html" title="Code Editor (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/python/python/04_incoming_rescue_turtle/index.html" title="4. Incoming Rescue Turtle! (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable python" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="python-installation">Python installation</h1>
+
+<p>We need Python before we can start. If you don&rsquo;t have Python installed yet, start by installing Python. Ideally we would like you to install the latest version of Python, however if you already have an earlier version installed that should work too! At a minimum, this tutorial requires Python 3.5.</p>
+<h2 id="check-your-version-of-python">Check your version of Python</h2>
+<p>We&rsquo;re going to perform a simple experiment to check whether Python is already installed, and if it is, what version is installed.</p>
+<p>Open the <em>Terminal</em> application of your choice (if you don&rsquo;t know what the terminal is feel free to ask a mentor) and enter the following command, depending on your operating system:</p>
+<div class="tab-panel" data-tab-group="a">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="macos"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('a','macos')"
+    >
+      <span class="tab-nav-text"><em><strong>MacOS</strong></em></span>
+    </button>
+    <button
+      data-tab-item="windows"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('a','windows')"
+    >
+      <span class="tab-nav-text"><em><strong>Windows</strong></em></span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="macos"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>python3 --version</span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      data-tab-item="windows"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>py --version</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<p>If the command returns <code>Python 3.Y.Z</code> congratulations you have Python installed! Otherwise you will have to install Python on your machine. How to do this will vary depending on your system, see below for instructions on how to do this for some common systems.</p>
+<h2 id="installation">Installation</h2>
+<div class="tab-panel" data-tab-group="a">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="macos"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('a','macos')"
+    >
+      <span class="tab-nav-text"><em><strong>MacOS</strong></em></span>
+    </button>
+    <button
+      data-tab-item="windows"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('a','windows')"
+    >
+      <span class="tab-nav-text"><em><strong>Windows</strong></em></span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="macos"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<p>Before you install Python on OS X, you should ensure your Mac settings allow installing packages that aren&rsquo;t from the App Store. Go to System Preferences (it&rsquo;s in the Applications folder), click
+&ldquo;Security &amp; Privacy,&rdquo; and then the &ldquo;General&rdquo; tab.  If your &ldquo;Allow apps downloaded from:&rdquo; is set to &ldquo;Mac App Store,&rdquo; change it to &ldquo;Mac App Store and identified developers.&rdquo;</p>
+<p>You need to go to the website <a href="https://www.python.org/downloads/" rel="external" target="_blank">https://www.python.org/downloads/</a> and download the latest version of the Python installer:</p>
+<ul>
+<li>Download the <em>Mac OS X 64-bit/32-bit installer</em> file,</li>
+<li>Double click <em>python-3.x.x-macosx10.x.pkg</em> to run the installer.</li>
+</ul>
+      </div>
+    </div>
+    <div
+      data-tab-item="windows"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<p>First check whether your computer is running a 32-bit version or a 64-bit version of Windows, by pressing the Windows key + Pause/Break key which will open your System info, and look at the &ldquo;System type&rdquo; line. You can download Python for Windows from the website <a href="https://www.python.org/downloads/windows/" rel="external" target="_blank">https://www.python.org/downloads/windows/</a>. Click on the &ldquo;Latest Python 3 Release - Python x.x.x&rdquo; link. If your computer is running a <strong>64-bit</strong> version of Windows, download the <strong>Windows x86-64 executable installer</strong>. Otherwise, download the <strong>Windows x86 executable installer</strong>. After downloading the installer, you should run it (double-click on it) and follow the instructions there.</p>
+<p>One thing to watch out for: During the installation you will notice a window marked &ldquo;Setup&rdquo;. Make sure you tick the &ldquo;Add Python 3.x to PATH&rdquo; checkbox and click on &ldquo;Install Now&rdquo;, as shown below.</p>
+<ul>
+<li>If you forget to tick above checkbox, the easiest way is to uninstall and re-install with the option ticked.</li>
+<li>If <code>Microsoft Store</code> opens up when you run &lsquo;python&rsquo; command in terminal, you can install python from the store directly. It will configure python environment for you.</li>
+</ul>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="#R-image-fa49cf8a73047df0a04d96de1b52cd9b" class="lightbox-link"><img alt="Don&rsquo;t forget to add Python to the Path" class="lazy lightbox figure-image" loading="lazy" src="content/Python/Python/03_getting_python_on_your_machine/1_python_installation/images/python-installation-options.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fa49cf8a73047df0a04d96de1b52cd9b"><img alt="Don&rsquo;t forget to add Python to the Path" class="lazy lightbox lightbox-image" loading="lazy" src="content/Python/Python/03_getting_python_on_your_machine/1_python_installation/images/python-installation-options.png"></a></p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="R-logo" href="/index.html">
+  <img src="/images/logo.png" alt="brand logo">
+</a>
+        </div>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="parent " data-nav-id="/python/index.html"><a class="padding" href="/python/index.html">Python 101</a><ul id="R-subsections-e59a306ea2eb42b73261573b05085bcc" class="collapsible-menu">
+            <li class="" data-nav-id="/python/python/01_turtles/index.html"><a class="padding" href="/python/python/01_turtles/index.html">1. Our first Python Turtle</a></li>
+            <li class="" data-nav-id="/python/python/02_hello_world/index.html"><a class="padding" href="/python/python/02_hello_world/index.html">2. Hello World</a></li>
+            <li class="parent alwaysopen " data-nav-id="/python/python/03_getting_python_on_your_machine/index.html"><a class="padding" href="/python/python/03_getting_python_on_your_machine/index.html">3. Getting Python on Your Machine</a><ul id="R-subsections-aeb560072527de4ef550cbc6ff08f309" class="collapsible-menu">
+            <li class="" data-nav-id="/python/python/03_getting_python_on_your_machine/2_code_editor/index.html"><a class="padding" href="/python/python/03_getting_python_on_your_machine/2_code_editor/index.html">Code Editor</a></li>
+            <li class="active " data-nav-id="/python/python/03_getting_python_on_your_machine/1_python_installation/index.html"><a class="padding" href="/python/python/03_getting_python_on_your_machine/1_python_installation/index.html">Python installation</a></li></ul></li>
+            <li class="" data-nav-id="/python/python/04_incoming_rescue_turtle/index.html"><a class="padding" href="/python/python/04_incoming_rescue_turtle/index.html">4. Incoming Rescue Turtle!</a></li>
+            <li class="" data-nav-id="/python/python/05_lets_clean_some_oceans/index.html"><a class="padding" href="/python/python/05_lets_clean_some_oceans/index.html">5. Let&#39;s Clean Some Oceans</a></li>
+            <li class="" data-nav-id="/python/python/06_keeping_count/index.html"><a class="padding" href="/python/python/06_keeping_count/index.html">6. Keeping Count</a></li>
+            <li class="" data-nav-id="/python/python/07_just_keep_swimming/index.html"><a class="padding" href="/python/python/07_just_keep_swimming/index.html">7. Just Keep Swimming</a></li>
+            <li class="" data-nav-id="/python/python/08_thats_a_wrap/index.html"><a class="padding" href="/python/python/08_thats_a_wrap/index.html">8. That&#39;s a Wrap</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-variant">Theme</label>
+                  <select id="R-select-variant">
+                    <option id="R-select-variant-relearn-light" value="relearn-light" selected>Relearn Light</option>
+                    <option id="R-select-variant-relearn-dark" value="relearn-dark">Relearn Dark</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.relearn.markVariant();</script>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/clipboard/clipboard.min.js?1751868412" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1751868412" defer></script>
+    <script src="/js/theme.js?1751868412" defer></script>
+  </body>
+</html>

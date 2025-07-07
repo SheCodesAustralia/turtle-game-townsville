@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>6. Keeping Count :: She Codes One Day Workshop Tutorials (new)</title>
+    <link>http://localhost:1313/python/python/06_keeping_count/index.html</link>
+    <description>So now we have some objects in our ocean - but we want to keep track of them using a scoreboard system.&#xA;Just above our game logic, towards the end of our code we want to add&#xA;def update_display(): score_writer.clear() health_writer.clear() score_writer.write(f&#34;Score: {score}&#34;, font=(&#34;Arial&#34;, 16, &#34;bold&#34;)) health_writer.write(f&#34;Health: {health}&#34;, font=(&#34;Arial&#34;, 16, &#34;bold&#34;)) update_display() You’ll notice we already had score_writer and health_writer set up in our code but we weren’t doing anything with them because our scoreboard wasn’t operational. Here we are making a function called update_display() which is going to first clear whatever was there, and then write our score in, and our health checker.</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <atom:link href="http://localhost:1313/python/python/06_keeping_count/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

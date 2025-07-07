@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>8. Make It Dynamic :: She Codes One Day Workshop Tutorials (new)</title>
+    <link>http://localhost:1313/python/python/08_make_it_dynamic/index.html</link>
+    <description>This is so exciting, we’ve got data from our Django admin but we need to display it on our page. Let’s go back to our views.py one more time and update it to look like the below:&#xA;from django.shortcuts import render from .models import Bakery def index(request): context = { &#34;bakeries&#34;: Bakery.objects.all() } return render(request, &#34;index.html&#34;, context) This is telling our views to go look at our models, pull all the objects we created (remember the objects we talked about in the She’s a Model section?) and show us that content, dynamically. Pretty snazzy.</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <atom:link href="http://localhost:1313/python/python/08_make_it_dynamic/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

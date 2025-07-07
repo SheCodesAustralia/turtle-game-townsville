@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/python/python/01_turtles/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/python/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/python/python/02_hello_world/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/python/python/03_getting_python_on_your_machine/2_code_editor/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/python/python/03_getting_python_on_your_machine/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/python/python/04_incoming_rescue_turtle/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/python/python/05_lets_clean_some_oceans/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/python/python/06_keeping_count/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/python/python/07_django_admin/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/python/python/08_thats_a_wrap/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/python/python/03_getting_python_on_your_machine/1_python_installation/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/categories/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/index.html</loc>
+  </url>
+</urlset>

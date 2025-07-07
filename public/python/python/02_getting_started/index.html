@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en-au" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.147.9">
+    <meta name="generator" content="Relearn 7.6.1+4407b4364ab6f7477f7671fbd20c0494bade40ee">
+    <meta name="description" content="In this tutorial you will be building a Bakery app. In order to do that, as you go through the tutorial you’ll be instructed on how to install various software on your computer and set up some online accounts as needed if you wish to put your site live on the internet.
+Brief intro to the command line Many of the steps below reference the console, terminal, command window, or command line – these all mean the same thing: a window on your computer where you can enter commands. For now, the main thing you need to know is how to open a command window and what it looks like:">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="2. Installation :: She Codes One Day Workshop Tutorials (new)">
+    <meta name="twitter:description" content="In this tutorial you will be building a Bakery app. In order to do that, as you go through the tutorial you’ll be instructed on how to install various software on your computer and set up some online accounts as needed if you wish to put your site live on the internet.
+Brief intro to the command line Many of the steps below reference the console, terminal, command window, or command line – these all mean the same thing: a window on your computer where you can enter commands. For now, the main thing you need to know is how to open a command window and what it looks like:">
+    <meta property="og:url" content="http://localhost:1313/python/python/02_getting_started/index.html">
+    <meta property="og:site_name" content="She Codes One Day Workshop Tutorials (new)">
+    <meta property="og:title" content="2. Installation :: She Codes One Day Workshop Tutorials (new)">
+    <meta property="og:description" content="In this tutorial you will be building a Bakery app. In order to do that, as you go through the tutorial you’ll be instructed on how to install various software on your computer and set up some online accounts as needed if you wish to put your site live on the internet.
+Brief intro to the command line Many of the steps below reference the console, terminal, command window, or command line – these all mean the same thing: a window on your computer where you can enter commands. For now, the main thing you need to know is how to open a command window and what it looks like:">
+    <meta property="og:locale" content="en_au">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="2. Installation :: She Codes One Day Workshop Tutorials (new)">
+    <meta itemprop="description" content="In this tutorial you will be building a Bakery app. In order to do that, as you go through the tutorial you’ll be instructed on how to install various software on your computer and set up some online accounts as needed if you wish to put your site live on the internet.
+Brief intro to the command line Many of the steps below reference the console, terminal, command window, or command line – these all mean the same thing: a window on your computer where you can enter commands. For now, the main thing you need to know is how to open a command window and what it looks like:">
+    <meta itemprop="wordCount" content="898">
+    <title>2. Installation :: She Codes One Day Workshop Tutorials (new)</title>
+    <link href="/python/python/02_getting_started/index.xml" rel="alternate" type="application/rss+xml" title="2. Installation :: She Codes One Day Workshop Tutorials (new)">
+    <link href="/images/logo.png?1751435152" rel="icon" type="image/png">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751435152" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751435152" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1751435152" rel="stylesheet">
+    <link href="/css/theme.css?1751435152" rel="stylesheet">
+    <link href="/css/format-html.css?1751435152" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1751435152" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1751435152" defer></script>
+    <script src="/js/lunr/lunr.min.js?1751435152" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1751435152" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1751435152" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1751435152" defer></script>
+    <script src="/js/search.js?1751435152" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/python\/python\/02_getting_started\/index.html';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['en'];
+      window.relearn.index_js_url="/searchindex.en.js?1751435152";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'relearn-light', 'relearn-dark' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/python/python/02_getting_started/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#brief-intro-to-the-command-line">Brief intro to the command line</a></li>
+        <li><a href="#install-a-code-editor">Install a Code Editor</a></li>
+        <li><a href="#set-up-virtual-environment-and-install-django">Set up virtual environment and install Django</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">She Codes One Day Workshop Tutorials (new)</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/python/index.html"><span itemprop="name">Python 101</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">2. Installation</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/python/python/01_turtles/index.html" title="1. Our first Python Turtle (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/python/python/03_your_first_django_project/index.html" title="3. Your First Django Project (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable python" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="2-installation">2. Installation</h1>
+
+<p>In this tutorial you will be building a Bakery app. In order to do that, as you go through the tutorial you&rsquo;ll be instructed on how to install various software on your computer and set up some online accounts as needed if you wish to put your site live on the internet.</p>
+<hr>
+<h3 id="brief-intro-to-the-command-line">Brief intro to the command line</h3>
+<p>Many of the steps below reference the <code>console</code>, <code>terminal</code>, <code>command window</code>, or <code>command line</code> &ndash; these all mean the same thing: a window on your computer where you can enter commands. For now, the main thing you need to know is how to open a command window and what it looks like:</p>
+<h4 id="opening-the-command-line">Opening the command line</h4>
+<div class="tab-panel" data-tab-group="a">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="macos"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('a','macos')"
+    >
+      <span class="tab-nav-text"><em><strong>MacOS</strong></em></span>
+    </button>
+    <button
+      data-tab-item="windows"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('a','windows')"
+    >
+      <span class="tab-nav-text"><em><strong>Windows</strong></em></span>
+    </button>
+    <button
+      data-tab-item="linux"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('a','linux')"
+    >
+      <span class="tab-nav-text"><em><strong>Linux</strong></em></span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="macos"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<p>Go to <strong>Launchpad → Other → Terminal</strong>.</p>
+      </div>
+    </div>
+    <div
+      data-tab-item="windows"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<ul>
+<li>Search <strong>Command Prompt</strong> in the Start menu.</li>
+<li>Open <strong>Windows System → Command Prompt</strong>.</li>
+<li>Use <code>Win + R</code>, type <code>cmd</code>, and press Enter.</li>
+</ul>
+      </div>
+    </div>
+    <div
+      data-tab-item="linux"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<p>Usually found under <strong>Applications → Accessories → Terminal</strong>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 id="install-python">Install Python</h4>
+<p>Django is written in Python. We need Python to do anything in Django. Let&rsquo;s start by installing it! We want you to install the latest version of Python 3, so if you have any earlier version, you will need to upgrade it. If you already have version 3.10 or higher you should be fine.</p>
+<div class="tab-panel" data-tab-group="a">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="macos"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('a','macos')"
+    >
+      <span class="tab-nav-text"><em><strong>MacOS</strong></em></span>
+    </button>
+    <button
+      data-tab-item="windows"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('a','windows')"
+    >
+      <span class="tab-nav-text"><em><strong>Windows</strong></em></span>
+    </button>
+    <button
+      data-tab-item="linux"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('a','linux')"
+    >
+      <span class="tab-nav-text"><em><strong>Linux</strong></em></span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="macos"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<ol>
+<li>Go to <a href="https://www.python.org/downloads/" rel="external" target="_blank">python.org</a>.</li>
+<li>Download the latest <strong>Python 3.x</strong> installer.</li>
+<li>Run the installer and follow the instructions.</li>
+</ol>
+      </div>
+    </div>
+    <div
+      data-tab-item="windows"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<ol>
+<li>Download <strong>Python</strong> from <a href="https://www.python.org/downloads/windows/" rel="external" target="_blank">python.org</a>.</li>
+<li>Run the installer and ensure you <strong>tick &ldquo;Add Python 3 to PATH&rdquo;</strong> before installing.</li>
+</ol>
+      </div>
+    </div>
+    <div
+      data-tab-item="linux"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<p>Check if Python is installed:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>python3 --version</span></span></code></pre></div>
+<p>If not, install it based on your Linux distribution. What&rsquo;s a Linux distribution? Distributions are packaged collections of software built on top of the Linux kernel, offering a complete operating system experience. We&rsquo;ve pulled out a couple to get you started, if yours isn&rsquo;t there - Google is your friend, or ask a mentor for help.</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo apt install python3   <span style="color:#75715e"># Debian/Ubuntu</span>
+</span></span><span style="display:flex;"><span>sudo dnf install python3   <span style="color:#75715e"># Fedora</span>
+</span></span><span style="display:flex;"><span>sudo zypper install python3  <span style="color:#75715e"># openSUSE</span></span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="install-a-code-editor">Install a Code Editor</h3>
+<p>There are a lot of different editors and it largely boils down to personal preference. Most Python programmers use complex but extremely powerful IDEs (Integrated Development Environments), such as PyCharm. As a beginner, however, that&rsquo;s probably less suitable; our recommendations are equally powerful, but a lot simpler:</p>
+<ul>
+<li><a href="https://code.visualstudio.com/" rel="external" target="_blank">Visual Studio Code</a></li>
+</ul>
+<h4 id="why-are-we-installing-a-code-editor">Why are we installing a code editor?</h4>
+<p>You might be wondering why we are installing this special code editor software, rather than using something like Word or Notepad.</p>
+<p>The first reason is that code needs to be plain text, and the problem with programs like Word and Textedit is that they don&rsquo;t actually produce plain text, they produce rich text (with fonts and formatting), using custom formats like RTF (Rich Text Format).</p>
+<p>The second reason is that code editors are specialized for editing code, so they can provide helpful features like highlighting code with color according to its meaning, or automatically closing quotes for you.</p>
+<p>We&rsquo;ll see all this in action later. Soon, you&rsquo;ll come to think of your trusty old code editor as one of your favorite tools.</p>
+<h3 id="set-up-virtual-environment-and-install-django">Set up virtual environment and install Django</h3>
+<p>Before we install Django we will get you to install an extremely useful tool to help keep your coding environment tidy on your computer. It&rsquo;s possible to skip this step, but it&rsquo;s highly recommended to follow it. Starting with the best possible setup will save you a lot of trouble in the future!</p>
+<p>So, let&rsquo;s create a virtual environment (also called a virtualenv). Virtualenv will isolate your Python/Django setup on a per-project basis. This means that any changes you make to one website won&rsquo;t affect any others you&rsquo;re also developing. Neat, right?</p>
+<p>All you need to do is find a directory in which you want to create the virtualenv; your home directory, for example. On Windows, it might look like <code>C:\Users\Name\</code> (where Name is the name of your login).</p>
+<h4 id="create-a-virtual-environment">Create a virtual environment</h4>
+<p>For this tutorial we will be using a new directory bakery_site from your home directory:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>mkdir bakery_site
+</span></span><span style="display:flex;"><span>cd bakery_site</span></span></code></pre></div>
+<p>We will make a virtualenv called <code>myvenv</code>. The general command will be in the format:</p>
+<div class="tab-panel" data-tab-group="a">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="macoslinux"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('a','macoslinux')"
+    >
+      <span class="tab-nav-text"><em><strong>MacOS/Linux</strong></em></span>
+    </button>
+    <button
+      data-tab-item="windows"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('a','windows')"
+    >
+      <span class="tab-nav-text"><em><strong>Windows</strong></em></span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="macoslinux"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>python3 -m venv myvenv</span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      data-tab-item="windows"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>python -m venv myvenv</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<p>Where myvenv is the name of your virtualenv. You can use any other name, but stick to lowercase and use no spaces, accents or special characters. It is also a good idea to keep the name short – you&rsquo;ll be referencing it a lot!</p>
+<h4 id="working-with-virtualenv">Working with virtualenv</h4>
+<p>The command above will create a directory called myvenv (or whatever name you chose) that contains our virtual environment (basically a bunch of directories and files).</p>
+<p>Start your virtual environment by running:</p>
+<div class="tab-panel" data-tab-group="a">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="macoslinux"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('a','macoslinux')"
+    >
+      <span class="tab-nav-text"><em><strong>MacOS/Linux</strong></em></span>
+    </button>
+    <button
+      data-tab-item="windows"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('a','windows')"
+    >
+      <span class="tab-nav-text"><em><strong>Windows</strong></em></span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="macoslinux"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>source myvenv/bin/activate</span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      data-tab-item="windows"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>myvenv<span style="color:#ae81ff">\S</span>cripts<span style="color:#ae81ff">\a</span>ctivate</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 id="install-django">Install Django</h4>
+<p>OK, we have all important dependencies in place. We can finally install Django!</p>
+<p>Before we do that, we should make sure we have the latest version of pip, the software that we use to install Django:</p>
+<ol>
+<li>Ensure you have the latest <strong>pip</strong>:</li>
+</ol>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>pip install --upgrade pip</span></span></code></pre></div>
+<ol start="2">
+<li>Find your <code>bakery_site</code> folder on your device and open it in VS Code. Create a <code>requirements.txt</code> file and add:</li>
+</ol>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>Django~=5.1.2</code></pre></div>
+<p>Hit save, and head back to your terminal.</p>
+<ol start="3">
+<li>Install dependencies:</li>
+</ol>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>pip install -r requirements.txt</span></span></code></pre></div>
+<p>This is telling your machine to go and look at the requirements file we just created and install the things created within. If you&rsquo;re having any issues with this step, grab a mentor.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="R-logo" href="/index.html">
+  <img src="/images/logo.png" alt="brand logo">
+</a>
+        </div>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="parent " data-nav-id="/python/index.html"><a class="padding" href="/python/index.html">Python 101</a><ul id="R-subsections-e59a306ea2eb42b73261573b05085bcc" class="collapsible-menu">
+            <li class="" data-nav-id="/python/python/01_turtles/index.html"><a class="padding" href="/python/python/01_turtles/index.html">1. Our first Python Turtle</a></li>
+            <li class="active " data-nav-id="/python/python/02_getting_started/index.html"><a class="padding" href="/python/python/02_getting_started/index.html">2. Installation</a></li>
+            <li class="" data-nav-id="/python/python/03_your_first_django_project/index.html"><a class="padding" href="/python/python/03_your_first_django_project/index.html">3. Your First Django Project</a></li>
+            <li class="" data-nav-id="/python/python/04_lets_get_appy/index.html"><a class="padding" href="/python/python/04_lets_get_appy/index.html">4. Let&#39;s Get Appy!</a></li>
+            <li class="" data-nav-id="/python/python/05_fake_it_til_you_bake_it/index.html"><a class="padding" href="/python/python/05_fake_it_til_you_bake_it/index.html">5. Fake it til you Bake it</a></li>
+            <li class="" data-nav-id="/python/python/06_shes_a_model/index.html"><a class="padding" href="/python/python/06_shes_a_model/index.html">6. She&#39;s a Model</a></li>
+            <li class="" data-nav-id="/python/python/07_django_admin/index.html"><a class="padding" href="/python/python/07_django_admin/index.html">7. Django Admin</a></li>
+            <li class="" data-nav-id="/python/python/08_make_it_dynamic/index.html"><a class="padding" href="/python/python/08_make_it_dynamic/index.html">8. Make It Dynamic</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-variant">Theme</label>
+                  <select id="R-select-variant">
+                    <option id="R-select-variant-relearn-light" value="relearn-light" selected>Relearn Light</option>
+                    <option id="R-select-variant-relearn-dark" value="relearn-dark">Relearn Dark</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.relearn.markVariant();</script>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/clipboard/clipboard.min.js?1751435152" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1751435152" defer></script>
+    <script src="/js/theme.js?1751435152" defer></script>
+  </body>
+</html>

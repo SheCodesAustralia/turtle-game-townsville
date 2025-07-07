@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4. Incoming Rescue Turtle! :: She Codes One Day Workshop Tutorials (new)</title>
+    <link>http://localhost:1313/python/python/04_incoming_rescue_turtle/index.html</link>
+    <description>Are you ready to build a game? As a reminder we are building something that looks a bit like this:&#xA;To take some of the heavy lifting off, we’ve prepared some starter code for you that covers things like styling and basic setup so you can focus on the fun stuff - writing the code that pulls it all together.</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <atom:link href="http://localhost:1313/python/python/04_incoming_rescue_turtle/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

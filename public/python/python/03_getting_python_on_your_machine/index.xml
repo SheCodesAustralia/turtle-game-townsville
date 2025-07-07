@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3. Getting Python on Your Machine :: She Codes One Day Workshop Tutorials (new)</title>
+    <link>http://localhost:1313/python/python/03_getting_python_on_your_machine/index.html</link>
+    <description>For this tutorial we are going to need python installed, and a code editor - in this case we are using VS Code.</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <atom:link href="http://localhost:1313/python/python/03_getting_python_on_your_machine/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Code Editor</title>
+      <link>http://localhost:1313/python/python/03_getting_python_on_your_machine/2_code_editor/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/python/python/03_getting_python_on_your_machine/2_code_editor/index.html</guid>
+      <description>VS Code VS Code is a very popular and free to use editor. It’s available for Windows, OS X and Linux. Note, if you are using a Chromebook then it will present you with a few options to download from, choose the option that has the .deb or debian and that should work for you.&#xA;Download it here&#xA;Why are we installing a code editor? You might be wondering why we are installing this special code editor software, rather than using something like Word or Notepad.</description>
+    </item>
+    <item>
+      <title>Python installation</title>
+      <link>http://localhost:1313/python/python/03_getting_python_on_your_machine/1_python_installation/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/python/python/03_getting_python_on_your_machine/1_python_installation/index.html</guid>
+      <description>We need Python before we can start. If you don’t have Python installed yet, start by installing Python. Ideally we would like you to install the latest version of Python, however if you already have an earlier version installed that should work too! At a minimum, this tutorial requires Python 3.5.&#xA;Check your version of Python We’re going to perform a simple experiment to check whether Python is already installed, and if it is, what version is installed.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python 101 :: She Codes One Day Workshop Tutorials (new)</title>
+    <link>http://localhost:1313/python/index.html</link>
+    <description>Meet Python: Your New Coding Sidekick 🐍&#xA;We think Python is as friendly as your favourite teacher, as flexible as a yoga instructor, and as powerful as a wizard.&#xA;What Makes Python So Sweet?&#xA;Super Easy to Read Python speaks almost plain English. No weird symbols, or confusing squiggles. Human readability is what makes this language a nice starting place. But don’t worry if it looks confusing to start - any language takes some practice.</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <atom:link href="http://localhost:1313/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1. Our first Python Turtle</title>
+      <link>http://localhost:1313/python/python/01_turtles/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/python/python/01_turtles/index.html</guid>
+      <description>Let’s get into our first bit of Python. Who’s played with a spirograph before - drawing circles or lines over and over again to make pretty geometric patterns?&#xA;We’re going to learn how to Python by building our own simple script to make a shape.&#xA;Start by heading over to Python Sandbox.&#xA;Let’s start off by running the script that is already in there. It should look like this:</description>
+    </item>
+    <item>
+      <title>2. Hello World</title>
+      <link>http://localhost:1313/python/python/02_hello_world/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/python/python/02_hello_world/index.html</guid>
+      <description>Hello World, this is me. Hello World is the most common starting point for any developer, dating all the way back to 1978!&#xA;Today we are going to do it in a couple of different ways.&#xA;Firstly, let’s swap to text mode on Python Sandbox by selecting the Mode menu up the top, and toggling to text mode&#xA;Let’s replace the current text with and press run.</description>
+    </item>
+    <item>
+      <title>3. Getting Python on Your Machine</title>
+      <link>http://localhost:1313/python/python/03_getting_python_on_your_machine/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/python/python/03_getting_python_on_your_machine/index.html</guid>
+      <description>For this tutorial we are going to need python installed, and a code editor - in this case we are using VS Code.</description>
+    </item>
+    <item>
+      <title>4. Incoming Rescue Turtle!</title>
+      <link>http://localhost:1313/python/python/04_incoming_rescue_turtle/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/python/python/04_incoming_rescue_turtle/index.html</guid>
+      <description>Are you ready to build a game? As a reminder we are building something that looks a bit like this:&#xA;To take some of the heavy lifting off, we’ve prepared some starter code for you that covers things like styling and basic setup so you can focus on the fun stuff - writing the code that pulls it all together.</description>
+    </item>
+    <item>
+      <title>5. Let&#39;s Clean Some Oceans</title>
+      <link>http://localhost:1313/python/python/05_lets_clean_some_oceans/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/python/python/05_lets_clean_some_oceans/index.html</guid>
+      <description>Next we’re going to add some objects to move in our ocean. By the end of this tutorial we will have a few different pieces of rubbish for our turtle rescuer to go and collect - cans, bottles, and plastic bags - as well as some coral reefs that we really don’t want our rescue turtle to run into and destroy.&#xA;To get started though we are just going to get one object ‘falling’ through our ocean.</description>
+    </item>
+    <item>
+      <title>6. Keeping Count</title>
+      <link>http://localhost:1313/python/python/06_keeping_count/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/python/python/06_keeping_count/index.html</guid>
+      <description>So now we have some objects in our ocean - but we want to keep track of them using a scoreboard system.&#xA;Just above our game logic, towards the end of our code we want to add&#xA;def update_display(): score_writer.clear() health_writer.clear() score_writer.write(f&#34;Score: {score}&#34;, font=(&#34;Arial&#34;, 16, &#34;bold&#34;)) health_writer.write(f&#34;Health: {health}&#34;, font=(&#34;Arial&#34;, 16, &#34;bold&#34;)) update_display() You’ll notice we already had score_writer and health_writer set up in our code but we weren’t doing anything with them because our scoreboard wasn’t operational. Here we are making a function called update_display() which is going to first clear whatever was there, and then write our score in, and our health checker.</description>
+    </item>
+    <item>
+      <title>7. Just Keep Swimming</title>
+      <link>http://localhost:1313/python/python/07_just_keep_swimming/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/python/python/07_just_keep_swimming/index.html</guid>
+      <description>Our next step is to add more things to the ocean. Currently we’ve just got one thing falling which isn’t very challenging.&#xA;Let’s replace our section about creating falling objects and replace it with the below. Delete the create falling objects section, paste in the snippet below and then let’s walk through it.&#xA;Tip The section we mean looks like this&#xA;# --- CREATE FALLING OBJECT --- falling = turtle.Turtle() falling.shape(&#34;can.gif&#34;) falling.penup() falling.goto(0, 300) # --- OBJECTS IN THE OCEAN --- ocean_objects = [] def create_object(): obj = turtle.Turtle() obj.penup() obj.speed(0) obj.goto(random.randint(-280, 280), 300) # Define multiple options trash_options = [ {&#34;shape&#34;: &#34;can.gif&#34;, &#34;color&#34;: None}, {&#34;shape&#34;: &#34;bottle.gif&#34;, &#34;color&#34;: None}, {&#34;shape&#34;: &#34;bag.gif&#34;, &#34;color&#34;: None}, ] reef_options = [ {&#34;shape&#34;: &#34;coral.gif&#34;, &#34;color&#34;: None}, ] # Choose type if random.random() &lt; 0.3: obj_data = random.choice(trash_options) obj.type = &#34;trash&#34; else: obj_data = random.choice(reef_options) obj.type = &#34;reef&#34; # Apply shape and color obj.shape(obj_data[&#34;shape&#34;]) if obj_data[&#34;color&#34;]: obj.color(obj_data[&#34;color&#34;]) ocean_objects.append(obj) So let’s step through this. First of all we are making an array with the line ocean_objects = []. An array is a list of things, like your shopping list or to-do list. Python saves it in a specific way so we can call upon it later on.</description>
+    </item>
+    <item>
+      <title>8. That&#39;s a Wrap</title>
+      <link>http://localhost:1313/python/python/08_thats_a_wrap/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/python/python/08_thats_a_wrap/index.html</guid>
+      <description>Check your code, it should look like the below.&#xA;Congratulations, you built yourself a Python game, learnt some things about turtles, and helped save the ocean.&#xA;import turtle import random # --- SETUP --- screen = turtle.Screen() screen.bgcolor(&#34;lightblue&#34;) screen.bgpic(&#39;image.gif&#39;) screen.title(&#34;Turtle Rescue Mission&#34;) screen.setup(width=600, height=600) screen.tracer(0) screen.addshape(&#34;coral.gif&#34;) screen.addshape(&#34;bag.gif&#34;) screen.addshape(&#34;can.gif&#34;) screen.addshape(&#34;bottle.gif&#34;) # --- OCEAN FACTS / MESSAGES --- ocean_facts = [ &#34;Did you know? A plastic bottle can take 450 years to decompose.&#34;, &#34;Did you know? Sea turtles often mistake plastic bags for jellyfish!&#34;, &#34;Did you know? Coral reefs support over 25% of all marine life.&#34;, &#34;Did you know? Only 9% of plastic ever produced has been recycled.&#34;, &#34;Did you know? Every minute, one garbage truck of plastic enters our oceans.&#34;, ] # --- PLAYER rescueturtle --- rescueturtle = turtle.Turtle() rescueturtle.color(&#34;pink&#34;) rescueturtle.shape(&#34;turtle&#34;) rescueturtle.penup() rescueturtle.setheading(90) rescueturtle.goto(0, -250) # --- SCORE + HEALTH --- score = 0 health = 3 score_writer = turtle.Turtle() score_writer.hideturtle() score_writer.color(&#34;white&#34;) score_writer.penup() score_writer.goto(-250, 260) health_writer = turtle.Turtle() health_writer.hideturtle() health_writer.color(&#34;lightpink&#34;) health_writer.penup() health_writer.goto(150, 260) # --- OCEAN FACT DISPLAY --- fact_writer = turtle.Turtle() fact_writer.hideturtle() fact_writer.penup() fact_writer.goto(0, -280) # Bottom of screen fact_writer.color(&#34;white&#34;) fact_writer.write(random.choice(ocean_facts), align=&#34;center&#34;, font=(&#34;Arial&#34;, 17, &#34;italic&#34;)) # --- OBJECTS IN THE OCEAN --- ocean_objects = [] def create_object(): obj = turtle.Turtle() obj.penup() obj.speed(0) obj.goto(random.randint(-280, 280), 300) # Define multiple options trash_options = [ {&#34;shape&#34;: &#34;can.gif&#34;, &#34;color&#34;: None}, {&#34;shape&#34;: &#34;bottle.gif&#34;, &#34;color&#34;: None}, {&#34;shape&#34;: &#34;bag.gif&#34;, &#34;color&#34;: None}, ] reef_options = [ {&#34;shape&#34;: &#34;coral.gif&#34;, &#34;color&#34;: None}, ] # Choose type if random.random() &lt; 0.3: obj_data = random.choice(trash_options) obj.type = &#34;trash&#34; else: obj_data = random.choice(reef_options) obj.type = &#34;reef&#34; # Apply shape and color obj.shape(obj_data[&#34;shape&#34;]) if obj_data[&#34;color&#34;]: obj.color(obj_data[&#34;color&#34;]) ocean_objects.append(obj) # --- DISPLAY UPDATER --- def update_display(): score_writer.clear() score_writer.write(&#34;Score: &#34; + str(score), font=(&#34;Arial&#34;, 16, &#34;bold&#34;)) health_writer.clear() health_writer.write(&#34;Health: &#34; + str(health), font=(&#34;Arial&#34;, 18, &#34;bold&#34;)) # --- KEYBOARD MOVEMENT --- def move_left(): x = rescueturtle.xcor() - 40 if x &lt; -280: x = -280 rescueturtle.setx(x) def move_right(): x = rescueturtle.xcor() + 40 if x &gt; 280: x = 280 rescueturtle.setx(x) screen.listen() screen.onkey(move_left, &#34;Left&#34;) screen.onkey(move_right, &#34;Right&#34;) def fall(item): global score, health item.sety(item.ycor() - 10) if item.distance(rescueturtle) &lt; 40 and item.ycor() &lt; -230: if item.type == &#34;trash&#34;: score += 1 elif item.type == &#34;reef&#34;: health -= 1 item.hideturtle() ocean_objects.remove(item) elif item.ycor() &lt; -300: item.hideturtle() ocean_objects.remove(item) # --- MAIN GAME LOOP --- def game_loop(): global score, health if random.random() &lt; 0.1: create_object() for obj in ocean_objects: fall(obj) update_display() if health &lt;= 0: game_over = turtle.Turtle() game_over.hideturtle() game_over.penup() game_over.goto(0, 0) game_over.write(&#34;💀 GAME OVER 💀&#34;, align=&#34;center&#34;, font=(&#34;Arial&#34;, 24, &#34;bold&#34;)) else: screen.update() screen.ontimer(game_loop, 100) # --- START GAME --- update_display() game_loop() turtle.done()</description>
+    </item>
+  </channel>
+</rss>

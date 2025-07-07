@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>7. Just Keep Swimming :: She Codes One Day Workshop Tutorials (new)</title>
+    <link>http://localhost:1313/python/python/07_just_keep_swimming/index.html</link>
+    <description>Our next step is to add more things to the ocean. Currently we’ve just got one thing falling which isn’t very challenging.&#xA;Let’s replace our section about creating falling objects and replace it with the below. Delete the create falling objects section, paste in the snippet below and then let’s walk through it.&#xA;Tip The section we mean looks like this&#xA;# --- CREATE FALLING OBJECT --- falling = turtle.Turtle() falling.shape(&#34;can.gif&#34;) falling.penup() falling.goto(0, 300) # --- OBJECTS IN THE OCEAN --- ocean_objects = [] def create_object(): obj = turtle.Turtle() obj.penup() obj.speed(0) obj.goto(random.randint(-280, 280), 300) # Define multiple options trash_options = [ {&#34;shape&#34;: &#34;can.gif&#34;, &#34;color&#34;: None}, {&#34;shape&#34;: &#34;bottle.gif&#34;, &#34;color&#34;: None}, {&#34;shape&#34;: &#34;bag.gif&#34;, &#34;color&#34;: None}, ] reef_options = [ {&#34;shape&#34;: &#34;coral.gif&#34;, &#34;color&#34;: None}, ] # Choose type if random.random() &lt; 0.3: obj_data = random.choice(trash_options) obj.type = &#34;trash&#34; else: obj_data = random.choice(reef_options) obj.type = &#34;reef&#34; # Apply shape and color obj.shape(obj_data[&#34;shape&#34;]) if obj_data[&#34;color&#34;]: obj.color(obj_data[&#34;color&#34;]) ocean_objects.append(obj) So let’s step through this. First of all we are making an array with the line ocean_objects = []. An array is a list of things, like your shopping list or to-do list. Python saves it in a specific way so we can call upon it later on.</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <atom:link href="http://localhost:1313/python/python/07_just_keep_swimming/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

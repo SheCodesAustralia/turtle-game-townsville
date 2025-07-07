@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en-au" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.147.9">
+    <meta name="generator" content="Relearn 7.6.1+4407b4364ab6f7477f7671fbd20c0494bade40ee">
+    <meta name="description" content="Setting Up We’ve got a website up and working - woohoo! We’ve got a few settings to play with, and then we can get some content loaded in.
+After creating an application, we need to tell Django that it should use it. We do that in the file bakery_project/settings.py, open it in your code editor. We need to find INSTALLED_APPS and add a line containing your app just above ]. So the final product should look like this:">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="5. Fake it til you Bake it :: She Codes One Day Workshop Tutorials (new)">
+    <meta name="twitter:description" content="Setting Up We’ve got a website up and working - woohoo! We’ve got a few settings to play with, and then we can get some content loaded in.
+After creating an application, we need to tell Django that it should use it. We do that in the file bakery_project/settings.py, open it in your code editor. We need to find INSTALLED_APPS and add a line containing your app just above ]. So the final product should look like this:">
+    <meta property="og:url" content="http://localhost:1313/python/python/05_fake_it_til_you_bake_it/index.html">
+    <meta property="og:site_name" content="She Codes One Day Workshop Tutorials (new)">
+    <meta property="og:title" content="5. Fake it til you Bake it :: She Codes One Day Workshop Tutorials (new)">
+    <meta property="og:description" content="Setting Up We’ve got a website up and working - woohoo! We’ve got a few settings to play with, and then we can get some content loaded in.
+After creating an application, we need to tell Django that it should use it. We do that in the file bakery_project/settings.py, open it in your code editor. We need to find INSTALLED_APPS and add a line containing your app just above ]. So the final product should look like this:">
+    <meta property="og:locale" content="en_au">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="5. Fake it til you Bake it :: She Codes One Day Workshop Tutorials (new)">
+    <meta itemprop="description" content="Setting Up We’ve got a website up and working - woohoo! We’ve got a few settings to play with, and then we can get some content loaded in.
+After creating an application, we need to tell Django that it should use it. We do that in the file bakery_project/settings.py, open it in your code editor. We need to find INSTALLED_APPS and add a line containing your app just above ]. So the final product should look like this:">
+    <meta itemprop="wordCount" content="879">
+    <title>5. Fake it til you Bake it :: She Codes One Day Workshop Tutorials (new)</title>
+    <link href="/python/python/05_fake_it_til_you_bake_it/index.xml" rel="alternate" type="application/rss+xml" title="5. Fake it til you Bake it :: She Codes One Day Workshop Tutorials (new)">
+    <link href="/images/logo.png?1751534132" rel="icon" type="image/png">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751534132" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751534132" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1751534132" rel="stylesheet">
+    <link href="/css/theme.css?1751534132" rel="stylesheet">
+    <link href="/css/format-html.css?1751534132" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1751534132" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1751534132" defer></script>
+    <script src="/js/lunr/lunr.min.js?1751534132" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1751534132" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1751534132" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1751534132" defer></script>
+    <script src="/js/search.js?1751534132" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/python\/python\/05_fake_it_til_you_bake_it\/index.html';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['en'];
+      window.relearn.index_js_url="/searchindex.en.js?1751534132";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'relearn-light', 'relearn-dark' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/python/python/05_fake_it_til_you_bake_it/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#setting-up">Setting Up</a>
+      <ul>
+        <li><a href="#static-and-media-files">Static and Media Files</a></li>
+      </ul>
+    </li>
+    <li><a href="#django-style">Django Style</a>
+      <ul>
+        <li><a href="#templates-directory">Templates Directory</a></li>
+      </ul>
+    </li>
+    <li><a href="#your-first-template">Your first template!</a></li>
+    <li><a href="#lets-add-a-bit-more-structure-and-experiment-with-html-tags">Let’s Add a Bit More Structure and Experiment with HTML Tags</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">She Codes One Day Workshop Tutorials (new)</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/python/index.html"><span itemprop="name">Python 101</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">5. Fake it til you Bake it</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/python/python/04_lets_get_appy/index.html" title="4. Let's Get Appy! (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/python/python/06_shes_a_model/index.html" title="6. She's a Model (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable python" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="5-fake-it-til-you-bake-it">5. Fake it til you Bake it</h1>
+
+<h2 id="setting-up">Setting Up</h2>
+<p>We&rsquo;ve got a website up and working - woohoo! We&rsquo;ve got a few settings to play with, and then we can get some content loaded in.</p>
+<p>After creating an application, we need to tell Django that it should use it. We do that in the file <code>bakery_project/settings.py</code>, open it in your code editor. We need to find <code>INSTALLED_APPS</code> and add a line containing your app just above <code>]</code>. So the final product should look like this:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>INSTALLED_APPS <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;django.contrib.admin&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;django.contrib.auth&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;django.contrib.contenttypes&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;django.contrib.sessions&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;django.contrib.messages&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;django.contrib.staticfiles&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;bakeries.apps.BakeriesConfig&#39;</span>,
+</span></span><span style="display:flex;"><span>]</span></span></code></pre></div>
+<h3 id="static-and-media-files">Static and Media Files</h3>
+<p>We&rsquo;ll also need to add a path for static files. Go down to the <em>end</em> of the file, and just underneath the <code>STATIC_URL</code> entry, add a new one called <code>STATIC_ROOT</code>:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span> STATICFILES_DIRS <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    BASE_DIR <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;bakery_project&#34;</span> <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;static&#34;</span>,
+</span></span><span style="display:flex;"><span> ]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>STATIC_URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;static/&#34;</span>
+</span></span><span style="display:flex;"><span> STATIC_ROOT <span style="color:#f92672">=</span> BASE_DIR <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;bakery_project&#34;</span> <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;staticfiles&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> MEDIA_URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;media/&#34;</span>
+</span></span><span style="display:flex;"><span> MEDIA_ROOT <span style="color:#f92672">=</span> BASE_DIR <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;bakery_project&#34;</span> <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;media&#34;</span></span></span></code></pre></div>
+<h4 id="lets-break-this-down">Let’s break this down:</h4>
+<ul>
+<li>
+<p><strong><code>STATICFILES_DIRS</code></strong>: Tells Django where to find your custom static files during development.<br>
+In this case, we’re keeping them inside <code>bakery_project/static/</code>.</p>
+</li>
+<li>
+<p><strong><code>STATIC_URL</code></strong>: This is the URL prefix for accessing static files in your browser<br>
+(e.g., <code>http://localhost:8000/static/</code>).</p>
+</li>
+<li>
+<p><strong><code>STATIC_ROOT</code></strong>: When you deploy your project, Django will collect all static files into this folder.<br>
+Think of this like a &ldquo;ready-to-serve&rdquo; folder for production.</p>
+</li>
+<li>
+<p><strong><code>MEDIA_URL</code></strong>: This is the URL prefix for accessing media files<br>
+(e.g., <code>http://localhost:8000/media/</code>).</p>
+</li>
+<li>
+<p><strong><code>MEDIA_ROOT</code></strong>: This tells Django where uploaded media files should be stored on your computer or server.</p>
+</li>
+</ul>
+<h2 id="django-style">Django Style</h2>
+<p>What&rsquo;s a template, you may ask?</p>
+<p>A template is a file that we can re-use to present different information in a consistent format – for example, you could use a template to help you write a letter because although each letter might contain a different message and be addressed to a different person, they will share the same format.</p>
+<p>A Django template&rsquo;s format is described in a language called HTML! If you have not already we recommend doing She Codes HTML/CSS tutorial!</p>
+<p>Before diving to create template, Let&rsquo;s make some changes in <code>bakery_project/settings.py</code>.</p>
+<h3 id="templates-directory">Templates Directory</h3>
+<p>By default, Django already knows how to find templates stored inside each app folder. But as your project grows, it’s helpful to have a shared location where you keep your main templates.</p>
+<p>Let’s tell Django to look inside a <code>templates</code> folder located at <code>bakery_project/templates/</code>.</p>
+<p>You don’t need to create the folder just yet, we’ll walk you through that later when we build your first template.</p>
+<p>Open <code>settings.py</code>, and find the <code>TEMPLATES</code> section. Update the <code>'DIRS'</code> entry like this:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span>TEMPLATES = [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        &#39;BACKEND&#39;: &#39;django.template.backends.django.DjangoTemplates&#39;,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-        &#39;DIRS&#39;: [],
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+        &#39;DIRS&#39;: [BASE_DIR / &#34;bakery_project&#34; / &#34;templates&#34;],
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>
+</span></span><span style="display:flex;"><span>        &#39;APP_DIRS&#39;: True,
+</span></span><span style="display:flex;"><span>        &#39;OPTIONS&#39;: {
+</span></span><span style="display:flex;"><span>            &#39;context_processors&#39;: [
+</span></span><span style="display:flex;"><span>                &#39;django.template.context_processors.debug&#39;,
+</span></span><span style="display:flex;"><span>                &#39;django.template.context_processors.request&#39;,
+</span></span><span style="display:flex;"><span>                &#39;django.contrib.auth.context_processors.auth&#39;,
+</span></span><span style="display:flex;"><span>                &#39;django.contrib.messages.context_processors.messages&#39;,
+</span></span><span style="display:flex;"><span>            ],
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div>
+<p>This tells Django to also search in this folder when rendering HTML pages.</p>
+
+<details open class=" box cstyle notices tip">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-lightbulb"></i> 
+    Tip
+  </summary>
+  <div class="box-content">
+<p>
+Using a shared templates directory keeps things tidy, especially when building base layouts used across multiple apps.
+  </div>
+</details>
+<h2 id="your-first-template">Your first template!</h2>
+<p>Creating a template means creating a template file. Everything is a file, right? You have probably noticed this already.</p>
+<p>Let’s create <code>templates</code> folder located at <code>bakery_project</code>. In our <code>templates</code> folder create a file and name it <code>index.html</code>.</p>
+<p>Let&rsquo;s add a heading and some text!</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">h1</span>&gt;🧁 Bakery Finder&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;Need to find a bakery in a hurry? Here&#39;s a list of bakeries in your local area&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;</span></span></code></pre></div>
+<p>Don&rsquo;t forget to save!</p>
+<p>So how does your website look now? Visit it to find out: http://127.0.0.1:8000/</p>
+<p>Huh, interesting, its still showing our Hello World! Remember earlier we wrote this in <code>views.py</code>?</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.http <span style="color:#f92672">import</span> HttpResponse
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>(request):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> HttpResponse(<span style="color:#e6db74">&#34;Hello, world. Welcome to our bakery.&#34;</span>)</span></span></code></pre></div>
+<p>This is saying whenever we load our app show us Hello World. This is no longer helpful, as we want to show our lovely bakery app. Lets change that line starting with return to the below:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#34;index.html&#34;</span>)</span></span></code></pre></div>
+<p>Now we are saying go find us <code>index.html</code> and show us that page.</p>
+<p>Save your code and refresh your website again and see how it looks.</p>
+<h2 id="lets-add-a-bit-more-structure-and-experiment-with-html-tags">Let’s Add a Bit More Structure and Experiment with HTML Tags</h2>
+<p>We&rsquo;ve written you some starter code to get you going, copy and paste the below into your index.html file, overriding what you added in earlier.</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">title</span>&gt;Bakery Finder&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">header</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">h1</span>&gt;🧁 Bakery Finder&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">header</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">p</span>&gt;Need to find a bakery in a hurry? Here&#39;s a list of bakeries in your local area:&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>      
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">h2</span>&gt;Sweet Treats&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;description&#34;</span>&gt;Specializing in cupcakes and macarons 🍰&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">p</span>&gt;Located at: 123 Tasty Street&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">p</span>&gt;Rating ⭐: 4.8&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#f92672">li</span>&gt;Chocolate Cupcake - $3.50&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#f92672">li</span>&gt;Vanilla Macaron - $2.00&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">h2</span>&gt;Bakehouse Delight&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;description&#34;</span>&gt;Fresh croissants and artisan bread 🥐&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">p</span>&gt;Located at: 456 Crusty Avenue&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">p</span>&gt;Rating ⭐: 4.6&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#f92672">li</span>&gt;Butter Croissant - $4.00&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#f92672">li</span>&gt;Sourdough Loaf - $6.50&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">footer</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">p</span>&gt;© 2025 Bakery Finder&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">footer</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;</span></span></code></pre></div>
+<p>Now you can have a bit of a play, editing some of the items, what your page is called, whatever you like really!
+As a reminder of some HTML tags, you might want to:</p>
+<ul>
+<li>Use <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> for headings.</li>
+<li>Wrap sections in <code>&lt;article&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> for structure.</li>
+<li>Use <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> for lists of items (like baked goods!).</li>
+<li>Use <code>&lt;p&gt;</code> for text blocks.</li>
+<li>Add more <code>&lt;article&gt;</code> sections for new bakeries!</li>
+</ul>
+<p>Go ahead and play around—change names, add new bakeries, change prices. This is your page!</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="R-logo" href="/index.html">
+  <img src="/images/logo.png" alt="brand logo">
+</a>
+        </div>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="parent " data-nav-id="/python/index.html"><a class="padding" href="/python/index.html">Python 101</a><ul id="R-subsections-e59a306ea2eb42b73261573b05085bcc" class="collapsible-menu">
+            <li class="" data-nav-id="/python/python/01_turtles/index.html"><a class="padding" href="/python/python/01_turtles/index.html">1. Our first Python Turtle</a></li>
+            <li class="" data-nav-id="/python/python/02_hello_world/index.html"><a class="padding" href="/python/python/02_hello_world/index.html">2. Hello World</a></li>
+            <li class="alwaysopen " data-nav-id="/python/python/03_getting_python_on_your_machine/index.html"><a class="padding" href="/python/python/03_getting_python_on_your_machine/index.html">3. Getting Python on Your Machine</a><ul id="R-subsections-aeb560072527de4ef550cbc6ff08f309" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/python/python/04_lets_get_appy/index.html"><a class="padding" href="/python/python/04_lets_get_appy/index.html">4. Let&#39;s Get Appy!</a></li>
+            <li class="active " data-nav-id="/python/python/05_fake_it_til_you_bake_it/index.html"><a class="padding" href="/python/python/05_fake_it_til_you_bake_it/index.html">5. Fake it til you Bake it</a></li>
+            <li class="" data-nav-id="/python/python/06_shes_a_model/index.html"><a class="padding" href="/python/python/06_shes_a_model/index.html">6. She&#39;s a Model</a></li>
+            <li class="" data-nav-id="/python/python/07_django_admin/index.html"><a class="padding" href="/python/python/07_django_admin/index.html">7. Django Admin</a></li>
+            <li class="" data-nav-id="/python/python/08_thats_a_wrap/index.html"><a class="padding" href="/python/python/08_thats_a_wrap/index.html">8. Make It Dynamic</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-variant">Theme</label>
+                  <select id="R-select-variant">
+                    <option id="R-select-variant-relearn-light" value="relearn-light" selected>Relearn Light</option>
+                    <option id="R-select-variant-relearn-dark" value="relearn-dark">Relearn Dark</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.relearn.markVariant();</script>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/clipboard/clipboard.min.js?1751534132" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1751534132" defer></script>
+    <script src="/js/theme.js?1751534132" defer></script>
+  </body>
+</html>

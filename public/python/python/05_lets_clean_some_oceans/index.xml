@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>5. Let&#39;s Clean Some Oceans :: She Codes One Day Workshop Tutorials (new)</title>
+    <link>http://localhost:1313/python/python/05_lets_clean_some_oceans/index.html</link>
+    <description>Next we’re going to add some objects to move in our ocean. By the end of this tutorial we will have a few different pieces of rubbish for our turtle rescuer to go and collect - cans, bottles, and plastic bags - as well as some coral reefs that we really don’t want our rescue turtle to run into and destroy.&#xA;To get started though we are just going to get one object ‘falling’ through our ocean.</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <atom:link href="http://localhost:1313/python/python/05_lets_clean_some_oceans/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

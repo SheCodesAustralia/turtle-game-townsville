@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2. Installation :: She Codes One Day Workshop Tutorials (new)</title>
+    <link>http://localhost:1313/python/python/02_getting_started/index.html</link>
+    <description>In this tutorial you will be building a Bakery app. In order to do that, as you go through the tutorial you’ll be instructed on how to install various software on your computer and set up some online accounts as needed if you wish to put your site live on the internet.&#xA;Brief intro to the command line Many of the steps below reference the console, terminal, command window, or command line – these all mean the same thing: a window on your computer where you can enter commands. For now, the main thing you need to know is how to open a command window and what it looks like:</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <atom:link href="http://localhost:1313/python/python/02_getting_started/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>She Codes One Day Workshop Tutorials (new)</title>
+    <link>http://localhost:1313/index.html</link>
+    <description>Welcome St Pat’s gals! We’re so excited to have you here.&#xA;Today we will be building a Python program using the Turtle module to simulate a mini “rescue mission” on the Great Barrier Reef.&#xA;Your turtle will be an environmental warrior, navigating through obstacles to collect rubbish in the ocean and avoid coral damage.&#xA;We’ll cover concepts like loops, functions, conditionals, and x-y coordinates, all while building a playable game.</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python 101</title>
+      <link>http://localhost:1313/python/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/python/index.html</guid>
+      <description>Meet Python: Your New Coding Sidekick 🐍&#xA;We think Python is as friendly as your favourite teacher, as flexible as a yoga instructor, and as powerful as a wizard.&#xA;What Makes Python So Sweet?&#xA;Super Easy to Read Python speaks almost plain English. No weird symbols, or confusing squiggles. Human readability is what makes this language a nice starting place. But don’t worry if it looks confusing to start - any language takes some practice.</description>
+    </item>
+  </channel>
+</rss>

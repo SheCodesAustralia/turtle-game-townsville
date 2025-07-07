@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3. Your First Django Project :: She Codes One Day Workshop Tutorials (new)</title>
+    <link>http://localhost:1313/python/python/getting_python_on_your_machine/index.html</link>
+    <description>The first step to create our Bakery Finder app is to start a new Django project. Django has some magic meaning that when we run some scripts, Django will create the skeleton of a Django project for us! The skeleton is a bunch of files that we will explain as we go.&#xA;Naming of these files and directories are very important. Django needs to maintain a certain structure to be able to find important bits of information. If they are renamed or moved, it might get confused or throw some unexpected errors. As such, you shouldn’t rename the files that we are about to create, or move them around.</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <lastBuildDate>Thu, 04 Feb 2021 20:02:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/python/python/getting_python_on_your_machine/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python installation</title>
+      <link>http://localhost:1313/python/python/getting_python_on_your_machine/1_python_installation/index.html</link>
+      <pubDate>Thu, 04 Feb 2021 20:02:00 +0800</pubDate>
+      <guid>http://localhost:1313/python/python/getting_python_on_your_machine/1_python_installation/index.html</guid>
+      <description>Let’s start with Python We’re finally here!&#xA;We need Python before we can start. If you don’t have Python installed yet, start by installing Python. Ideally we would like you to install the latest version of Python, however if you already have an earlier version installed that should work too! At a minimum, this tutorial requires Python 3.5.&#xA;Info This section is based on a tutorial by Geek Girls Carrots.</description>
+    </item>
+    <item>
+      <title>Code Editor</title>
+      <link>http://localhost:1313/python/python/getting_python_on_your_machine/2_code_editor/index.html</link>
+      <pubDate>Thu, 04 Feb 2021 20:02:00 +0800</pubDate>
+      <guid>http://localhost:1313/python/python/getting_python_on_your_machine/2_code_editor/index.html</guid>
+      <description>Code editor You’re about to write your first line of code, so it’s time to download a code editor!&#xA;Note You might have done this earlier in the Installation chapter – if so, you can skip right ahead to the next chapter!&#xA;There are a lot of different editors and it largely boils down to personal preference.&#xA;Our suggestion is below, but feel free to ask your mentor about other code editors.</description>
+    </item>
+  </channel>
+</rss>

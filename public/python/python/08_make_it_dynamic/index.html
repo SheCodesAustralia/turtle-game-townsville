@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en-au" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.147.9">
+    <meta name="generator" content="Relearn 7.6.1+4407b4364ab6f7477f7671fbd20c0494bade40ee">
+    <meta name="description" content="This is so exciting, we’ve got data from our Django admin but we need to display it on our page. Let’s go back to our views.py one more time and update it to look like the below:
+from django.shortcuts import render from .models import Bakery def index(request): context = { &#34;bakeries&#34;: Bakery.objects.all() } return render(request, &#34;index.html&#34;, context) This is telling our views to go look at our models, pull all the objects we created (remember the objects we talked about in the She’s a Model section?) and show us that content, dynamically. Pretty snazzy.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="8. Make It Dynamic :: She Codes One Day Workshop Tutorials (new)">
+    <meta name="twitter:description" content="This is so exciting, we’ve got data from our Django admin but we need to display it on our page. Let’s go back to our views.py one more time and update it to look like the below:
+from django.shortcuts import render from .models import Bakery def index(request): context = { &#34;bakeries&#34;: Bakery.objects.all() } return render(request, &#34;index.html&#34;, context) This is telling our views to go look at our models, pull all the objects we created (remember the objects we talked about in the She’s a Model section?) and show us that content, dynamically. Pretty snazzy.">
+    <meta property="og:url" content="http://localhost:1313/python/python/08_make_it_dynamic/index.html">
+    <meta property="og:site_name" content="She Codes One Day Workshop Tutorials (new)">
+    <meta property="og:title" content="8. Make It Dynamic :: She Codes One Day Workshop Tutorials (new)">
+    <meta property="og:description" content="This is so exciting, we’ve got data from our Django admin but we need to display it on our page. Let’s go back to our views.py one more time and update it to look like the below:
+from django.shortcuts import render from .models import Bakery def index(request): context = { &#34;bakeries&#34;: Bakery.objects.all() } return render(request, &#34;index.html&#34;, context) This is telling our views to go look at our models, pull all the objects we created (remember the objects we talked about in the She’s a Model section?) and show us that content, dynamically. Pretty snazzy.">
+    <meta property="og:locale" content="en_au">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="8. Make It Dynamic :: She Codes One Day Workshop Tutorials (new)">
+    <meta itemprop="description" content="This is so exciting, we’ve got data from our Django admin but we need to display it on our page. Let’s go back to our views.py one more time and update it to look like the below:
+from django.shortcuts import render from .models import Bakery def index(request): context = { &#34;bakeries&#34;: Bakery.objects.all() } return render(request, &#34;index.html&#34;, context) This is telling our views to go look at our models, pull all the objects we created (remember the objects we talked about in the She’s a Model section?) and show us that content, dynamically. Pretty snazzy.">
+    <meta itemprop="wordCount" content="832">
+    <title>8. Make It Dynamic :: She Codes One Day Workshop Tutorials (new)</title>
+    <link href="/python/python/08_make_it_dynamic/index.xml" rel="alternate" type="application/rss+xml" title="8. Make It Dynamic :: She Codes One Day Workshop Tutorials (new)">
+    <link href="/images/logo.png?1751435152" rel="icon" type="image/png">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751435152" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751435152" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1751435152" rel="stylesheet">
+    <link href="/css/theme.css?1751435152" rel="stylesheet">
+    <link href="/css/format-html.css?1751435152" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1751435152" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1751435152" defer></script>
+    <script src="/js/lunr/lunr.min.js?1751435152" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1751435152" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1751435152" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1751435152" defer></script>
+    <script src="/js/search.js?1751435152" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/python\/python\/08_make_it_dynamic\/index.html';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['en'];
+      window.relearn.index_js_url="/searchindex.en.js?1751435152";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'relearn-light', 'relearn-dark' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/python/python/08_make_it_dynamic/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#adding-django-data--make-it-dynamic">Adding Django Data – Make It Dynamic!</a></li>
+    <li><a href="#whats-going-on-here">What’s Going On Here?</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">She Codes One Day Workshop Tutorials (new)</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/python/index.html"><span itemprop="name">Python 101</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">8. Make It Dynamic</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/python/python/07_django_admin/index.html" title="7. Django Admin (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><span class="topbar-control"><i class="fa-fw fas fa-chevron-right"></i></span>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable python" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="8-make-it-dynamic">8. Make It Dynamic</h1>
+
+<p>This is so exciting, we&rsquo;ve got data from our Django admin but we need to display it on our page. Let&rsquo;s go back to our views.py one more time and update it to look like the below:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.shortcuts <span style="color:#f92672">import</span> render
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> Bakery
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>(request):
+</span></span><span style="display:flex;"><span>    context <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;bakeries&#34;</span>: Bakery<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>all()
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#34;index.html&#34;</span>, context)</span></span></code></pre></div>
+<p>This is telling our views to go look at our models, pull all the objects we created (remember the objects we talked about in the She&rsquo;s a Model section?) and show us that content, dynamically. Pretty snazzy.</p>
+<h2 id="adding-django-data--make-it-dynamic">Adding Django Data – Make It Dynamic!</h2>
+<p>Right now, the data on your page is hardcoded. But Django is all about <strong>dynamic content</strong> meaning you can pull real data from your database and render it with your template.</p>
+<p>So let’s replace our sample bakeries with a smart Django loop that pulls real bakery info from your models. At the <strong>very top</strong> of your template file, add this line:<code>{% load static %}</code>.
+This tells Django to prepare for using static files — like CSS stylesheets, images, or JavaScript.</p>
+<p>Notice in the snippet below we are removing the section in main from <code>&lt;article&gt;</code> down to <code>&lt;/article&gt;</code> and replacing it with code that starts with {% for bakery in bakeries %} and ends with {% endfor %}. Watch carefully for the + and - lines in this one - it&rsquo;s easy to get caught out.</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span><span style="color:#a6e22e">+ {% load static %}
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>
+</span></span><span style="display:flex;"><span>&lt;!DOCTYPE html&gt;
+</span></span><span style="display:flex;"><span>&lt;html lang=&#34;en&#34;&gt;
+</span></span><span style="display:flex;"><span>  &lt;head&gt;
+</span></span><span style="display:flex;"><span>    &lt;meta charset=&#34;utf-8&#34;&gt;
+</span></span><span style="display:flex;"><span>    &lt;title&gt;Bakery Finder&lt;/title&gt;
+</span></span><span style="display:flex;"><span>  &lt;/head&gt;
+</span></span><span style="display:flex;"><span>  &lt;body&gt;
+</span></span><span style="display:flex;"><span>    &lt;header&gt;
+</span></span><span style="display:flex;"><span>      &lt;h1&gt;🧁 Bakery Finder&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>    &lt;/header&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    &lt;main&gt;
+</span></span><span style="display:flex;"><span>      &lt;p&gt;Need to find a bakery in a hurry? Here&#39;s a list of bakeries in your local area:&lt;/p&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-     &lt;article&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-       &lt;h2&gt;Sweet Treats&lt;/h2&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-       &lt;p class=&#34;description&#34;&gt;Specializing in cupcakes and macarons 🍰&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-       &lt;p&gt;Located at: 123 Tasty Street&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-       &lt;p&gt;Rating ⭐: 4.8&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-       &lt;ul&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-         &lt;li&gt;Chocolate Cupcake - $3.50&lt;/li&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-         &lt;li&gt;Vanilla Macaron - $2.00&lt;/li&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-       &lt;/ul&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-     &lt;/article&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-     &lt;article&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-       &lt;h2&gt;Bakehouse Delight&lt;/h2&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-       &lt;p class=&#34;description&#34;&gt;Fresh croissants and artisan bread 🥐&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-       &lt;p&gt;Located at: 456 Crusty Avenue&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-       &lt;p&gt;Rating ⭐: 4.6&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-       &lt;ul&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-         &lt;li&gt;Butter Croissant - $4.00&lt;/li&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-         &lt;li&gt;Sourdough Loaf - $6.50&lt;/li&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-       &lt;/ul&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-     &lt;/article&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">+     {% for bakery in bakeries %}
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+       &lt;article&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+         &lt;h2&gt;{{ bakery.name }}&lt;/h2&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+         &lt;p class=&#34;description&#34;&gt;{{ bakery.cuisine }}&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+         &lt;p&gt;Located at: {{ bakery.address|linebreaksbr }}&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+         &lt;p&gt;Rating ⭐: {{ bakery.rating }}&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+         &lt;ul&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+           {% for item in bakery.item_set.all %}
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+             &lt;li&gt;{{ item.name }} - ${{ item.price }}&lt;/li&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+           {% endfor %}
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+         &lt;/ul&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+       &lt;/article&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+     {% empty %}
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+       &lt;p&gt;No bakeries found. Add some via the admin panel!&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+     {% endfor %}
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>    &lt;/main&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    &lt;footer&gt;
+</span></span><span style="display:flex;"><span>      &lt;p&gt;© 2025 Bakery Finder&lt;/p&gt;
+</span></span><span style="display:flex;"><span>    &lt;/footer&gt;
+</span></span><span style="display:flex;"><span>  &lt;/body&gt;
+</span></span><span style="display:flex;"><span>&lt;/html&gt;
+</span></span></code></pre></div>
+<h2 id="whats-going-on-here">What’s Going On Here?</h2>
+<p>Let&rsquo;s break down the Django template tags and expressions used in your dynamic page.</p>
+<ul>
+<li>
+<p><code>{% for bakery in bakeries %}</code><br>
+→ This starts a loop that runs once for <strong>every bakery</strong> in your database. Django will automatically pass the list of bakeries from your view function to this template.</p>
+</li>
+<li>
+<p><code>{{ bakery.name }}</code><br>
+→ This grabs the name of each bakery and displays it in an <code>&lt;h2&gt;</code> heading.</p>
+</li>
+<li>
+<p><code>{{ bakery.cuisine }}</code><br>
+→ Maybe they do cupcakes, croissants, sourdough — we’re showing off their specialty.</p>
+</li>
+<li>
+<p><code>{{ bakery.address|linebreaksbr }}</code><br>
+→ The address might have line breaks, and <code>|linebreaksbr</code> helps format it nicely with <code>&lt;br&gt;</code> tags.</p>
+</li>
+<li>
+<p><code>{{ bakery.rating }}</code><br>
+→ Yep, we’re even showing the star rating!</p>
+</li>
+<li>
+<p><code>{% for item in bakery.item_set.all %}</code><br>
+→ This is a <strong>nested loop</strong> that lists each item (like cupcakes, bread, or macarons) that belongs to the current bakery. Django knows the relationship because of your model setup (ForeignKey from <code>Item</code> to <code>Bakery</code>).</p>
+</li>
+<li>
+<p><code>{% empty %}</code><br>
+→ Super friendly UX: if your database doesn’t have any bakeries yet, Django will show a helpful message.</p>
+</li>
+<li>
+<p><code>{% endfor %}</code><br>
+→ This wraps up the loop.</p>
+</li>
+</ul>
+<hr>
+<p>Let&rsquo;s go ahead and check your server http://127.0.0.1:8000/</p>
+<p><a href="#R-image-9d308d8d7077915d0518b980ce515dce" class="lightbox-link"><img alt="dynamicdata" class="lazy lightbox figure-image" loading="lazy" src="/python/python/08_make_it_dynamic/images/dynamic_data.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9d308d8d7077915d0518b980ce515dce"><img alt="dynamicdata" class="lazy lightbox lightbox-image" loading="lazy" src="/python/python/08_make_it_dynamic/images/dynamic_data.png"></a></p>
+<p>We&rsquo;ve got our data in dynamically now, heck yes!! Did you notice though that we added photos for our items in the Django admin but haven&rsquo;t got them on our website yet. We want to be salivating looking at the delicious treats so lets add another snippet to include images.</p>
+<p>Inside our code we should have a snippet that starts with <code>{% for item in bakery.item_set.all %}</code> - let&rsquo;s replace it with the below snippet. See how we now have a line in here with images in it? This should load our photos.</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-django" data-lang="django"><span style="display:flex;"><span>                <span style="color:#75715e">{%</span> <span style="color:#66d9ef">for</span> item <span style="color:#66d9ef">in</span> bakery.item_set.all <span style="color:#75715e">%}</span>
+</span></span><span style="display:flex;"><span>                &lt;li&gt;&lt;span&gt;<span style="color:#75715e">{{</span> item.name <span style="color:#75715e">}}</span> - $<span style="color:#75715e">{{</span> item.price <span style="color:#75715e">}}</span>&lt;/span&gt;
+</span></span><span style="display:flex;"><span>                    &lt;br /&gt;
+</span></span><span style="display:flex;"><span>                    &lt;img style=&#34;width:200px;&#34; src=&#34;<span style="color:#75715e">{{</span> item.image <span style="color:#75715e">}}</span>&#34;&gt;&lt;/a&gt;
+</span></span><span style="display:flex;"><span>                &lt;/li&gt;
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">{%</span> <span style="color:#66d9ef">endfor</span> <span style="color:#75715e">%}</span></span></span></code></pre></div>
+<p>Now, every time you add a new bakery via the admin, it’ll automatically show up here! This is where Django starts feeling like magic ✨</p>
+<p>Let&rsquo;s go ahead and check your server http://127.0.0.1:8000/</p>
+<p><a href="#R-image-dff353bc54902cf305890f3122b34a4d" class="lightbox-link"><img alt="bootstrapstyle" class="lazy lightbox figure-image" loading="lazy" src="/python/python/08_make_it_dynamic/images/bootstrap_style.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dff353bc54902cf305890f3122b34a4d"><img alt="bootstrapstyle" class="lazy lightbox lightbox-image" loading="lazy" src="/python/python/08_make_it_dynamic/images/bootstrap_style.png"></a></p>
+<p>Now let&rsquo;s go to admin http://127.0.0.1:8000/admin. Login with your superuser credentials. Remember in admin section (Chapter 7) where we played around and added some bakery details? It&rsquo;s time to add more and watch it come to life!</p>
+<p>That&rsquo;s all folks, you&rsquo;ve built your first Django app. We&rsquo;re so proud of you!!!</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="R-logo" href="/index.html">
+  <img src="/images/logo.png" alt="brand logo">
+</a>
+        </div>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="parent " data-nav-id="/python/index.html"><a class="padding" href="/python/index.html">Python 101</a><ul id="R-subsections-e59a306ea2eb42b73261573b05085bcc" class="collapsible-menu">
+            <li class="" data-nav-id="/python/python/01_turtles/index.html"><a class="padding" href="/python/python/01_turtles/index.html">1. Our first Python Turtle</a></li>
+            <li class="" data-nav-id="/python/python/02_getting_started/index.html"><a class="padding" href="/python/python/02_getting_started/index.html">2. Installation</a></li>
+            <li class="" data-nav-id="/python/python/03_your_first_django_project/index.html"><a class="padding" href="/python/python/03_your_first_django_project/index.html">3. Your First Django Project</a></li>
+            <li class="" data-nav-id="/python/python/04_lets_get_appy/index.html"><a class="padding" href="/python/python/04_lets_get_appy/index.html">4. Let&#39;s Get Appy!</a></li>
+            <li class="" data-nav-id="/python/python/05_fake_it_til_you_bake_it/index.html"><a class="padding" href="/python/python/05_fake_it_til_you_bake_it/index.html">5. Fake it til you Bake it</a></li>
+            <li class="" data-nav-id="/python/python/06_shes_a_model/index.html"><a class="padding" href="/python/python/06_shes_a_model/index.html">6. She&#39;s a Model</a></li>
+            <li class="" data-nav-id="/python/python/07_django_admin/index.html"><a class="padding" href="/python/python/07_django_admin/index.html">7. Django Admin</a></li>
+            <li class="active " data-nav-id="/python/python/08_make_it_dynamic/index.html"><a class="padding" href="/python/python/08_make_it_dynamic/index.html">8. Make It Dynamic</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-variant">Theme</label>
+                  <select id="R-select-variant">
+                    <option id="R-select-variant-relearn-light" value="relearn-light" selected>Relearn Light</option>
+                    <option id="R-select-variant-relearn-dark" value="relearn-dark">Relearn Dark</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.relearn.markVariant();</script>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/clipboard/clipboard.min.js?1751435152" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1751435152" defer></script>
+    <script src="/js/theme.js?1751435152" defer></script>
+  </body>
+</html>

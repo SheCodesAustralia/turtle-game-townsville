@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python installation :: She Codes One Day Workshop Tutorials (new)</title>
+    <link>http://localhost:1313/python/python/getting_python_on_your_machine/1_python_installation/index.html</link>
+    <description>Let’s start with Python We’re finally here!&#xA;We need Python before we can start. If you don’t have Python installed yet, start by installing Python. Ideally we would like you to install the latest version of Python, however if you already have an earlier version installed that should work too! At a minimum, this tutorial requires Python 3.5.&#xA;Info This section is based on a tutorial by Geek Girls Carrots.</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/python/python/getting_python_on_your_machine/1_python_installation/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

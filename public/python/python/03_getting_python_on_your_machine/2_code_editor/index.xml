@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code Editor :: She Codes One Day Workshop Tutorials (new)</title>
+    <link>http://localhost:1313/python/python/03_getting_python_on_your_machine/2_code_editor/index.html</link>
+    <description>VS Code VS Code is a very popular and free to use editor. It’s available for Windows, OS X and Linux. Note, if you are using a Chromebook then it will present you with a few options to download from, choose the option that has the .deb or debian and that should work for you.&#xA;Download it here&#xA;Why are we installing a code editor? You might be wondering why we are installing this special code editor software, rather than using something like Word or Notepad.</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <atom:link href="http://localhost:1313/python/python/03_getting_python_on_your_machine/2_code_editor/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

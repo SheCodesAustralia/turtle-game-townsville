@@ -1,0 +1,7 @@
+theme = 'hugo-theme-relearn'
+baseURL = 'https://tutorials.shecodes.com.au'
+languageCode = 'en-au'
+title = 'She Codes One Day Workshop Tutorials (new)'
+
+[params]
+  themeVariant = ['relearn-light', 'relearn-dark']

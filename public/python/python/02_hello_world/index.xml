@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2. Hello World :: She Codes One Day Workshop Tutorials (new)</title>
+    <link>http://localhost:1313/python/python/02_hello_world/index.html</link>
+    <description>Hello World, this is me. Hello World is the most common starting point for any developer, dating all the way back to 1978!&#xA;Today we are going to do it in a couple of different ways.&#xA;Firstly, let’s swap to text mode on Python Sandbox by selecting the Mode menu up the top, and toggling to text mode&#xA;Let’s replace the current text with and press run.</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <atom:link href="http://localhost:1313/python/python/02_hello_world/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

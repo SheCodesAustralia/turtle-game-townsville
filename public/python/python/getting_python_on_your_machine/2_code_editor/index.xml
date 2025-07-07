@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code Editor :: She Codes One Day Workshop Tutorials (new)</title>
+    <link>http://localhost:1313/python/python/getting_python_on_your_machine/2_code_editor/index.html</link>
+    <description>Code editor You’re about to write your first line of code, so it’s time to download a code editor!&#xA;Note You might have done this earlier in the Installation chapter – if so, you can skip right ahead to the next chapter!&#xA;There are a lot of different editors and it largely boils down to personal preference.&#xA;Our suggestion is below, but feel free to ask your mentor about other code editors.</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/python/python/getting_python_on_your_machine/2_code_editor/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

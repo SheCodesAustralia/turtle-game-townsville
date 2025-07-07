@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>6. She&#39;s a Model :: She Codes One Day Workshop Tutorials (new)</title>
+    <link>http://localhost:1313/python/python/06_shes_a_model/index.html</link>
+    <description>So we’ve got a page but its all hardcoded and manual. That’s no fun, we want dynamic data. Let’s start by getting ourselves a database to store that data in.&#xA;Set up a database There’s a lot of different database software that can store data for your site. We’ll use the default one, sqlite3.&#xA;This is already set up in this part of your mysite/settings.py file:&#xA;DATABASES = { &#34;default&#34;: { &#34;ENGINE&#34;: &#34;django.db.backends.sqlite3&#34;, &#34;NAME&#34;: BASE_DIR / &#34;db.sqlite3&#34;, } } To create a database for our app, let’s run the following in the console: python manage.py migrate (we need to be in the bakery_site directory that contains the manage.py file). If your server is still running, press Control + C to stop it to run the next command.</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <atom:link href="http://localhost:1313/python/python/06_shes_a_model/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

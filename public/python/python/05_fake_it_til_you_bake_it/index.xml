@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>5. Fake it til you Bake it :: She Codes One Day Workshop Tutorials (new)</title>
+    <link>http://localhost:1313/python/python/05_fake_it_til_you_bake_it/index.html</link>
+    <description>Setting Up We’ve got a website up and working - woohoo! We’ve got a few settings to play with, and then we can get some content loaded in.&#xA;After creating an application, we need to tell Django that it should use it. We do that in the file bakery_project/settings.py, open it in your code editor. We need to find INSTALLED_APPS and add a line containing your app just above ]. So the final product should look like this:</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <atom:link href="http://localhost:1313/python/python/05_fake_it_til_you_bake_it/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

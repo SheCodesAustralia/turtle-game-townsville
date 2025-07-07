@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en-au" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.147.9">
+    <meta name="generator" content="Relearn 7.6.1+4407b4364ab6f7477f7671fbd20c0494bade40ee">
+    <meta name="description" content="So we’ve got a page but its all hardcoded and manual. That’s no fun, we want dynamic data. Let’s start by getting ourselves a database to store that data in.
+Set up a database There’s a lot of different database software that can store data for your site. We’ll use the default one, sqlite3.
+This is already set up in this part of your mysite/settings.py file:
+DATABASES = { &#34;default&#34;: { &#34;ENGINE&#34;: &#34;django.db.backends.sqlite3&#34;, &#34;NAME&#34;: BASE_DIR / &#34;db.sqlite3&#34;, } } To create a database for our app, let’s run the following in the console: python manage.py migrate (we need to be in the bakery_site directory that contains the manage.py file). If your server is still running, press Control &#43; C to stop it to run the next command.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="6. She&#39;s a Model :: She Codes One Day Workshop Tutorials (new)">
+    <meta name="twitter:description" content="So we’ve got a page but its all hardcoded and manual. That’s no fun, we want dynamic data. Let’s start by getting ourselves a database to store that data in.
+Set up a database There’s a lot of different database software that can store data for your site. We’ll use the default one, sqlite3.
+This is already set up in this part of your mysite/settings.py file:
+DATABASES = { &#34;default&#34;: { &#34;ENGINE&#34;: &#34;django.db.backends.sqlite3&#34;, &#34;NAME&#34;: BASE_DIR / &#34;db.sqlite3&#34;, } } To create a database for our app, let’s run the following in the console: python manage.py migrate (we need to be in the bakery_site directory that contains the manage.py file). If your server is still running, press Control &#43; C to stop it to run the next command.">
+    <meta property="og:url" content="http://localhost:1313/python/python/06_shes_a_model/index.html">
+    <meta property="og:site_name" content="She Codes One Day Workshop Tutorials (new)">
+    <meta property="og:title" content="6. She&#39;s a Model :: She Codes One Day Workshop Tutorials (new)">
+    <meta property="og:description" content="So we’ve got a page but its all hardcoded and manual. That’s no fun, we want dynamic data. Let’s start by getting ourselves a database to store that data in.
+Set up a database There’s a lot of different database software that can store data for your site. We’ll use the default one, sqlite3.
+This is already set up in this part of your mysite/settings.py file:
+DATABASES = { &#34;default&#34;: { &#34;ENGINE&#34;: &#34;django.db.backends.sqlite3&#34;, &#34;NAME&#34;: BASE_DIR / &#34;db.sqlite3&#34;, } } To create a database for our app, let’s run the following in the console: python manage.py migrate (we need to be in the bakery_site directory that contains the manage.py file). If your server is still running, press Control &#43; C to stop it to run the next command.">
+    <meta property="og:locale" content="en_au">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="6. She&#39;s a Model :: She Codes One Day Workshop Tutorials (new)">
+    <meta itemprop="description" content="So we’ve got a page but its all hardcoded and manual. That’s no fun, we want dynamic data. Let’s start by getting ourselves a database to store that data in.
+Set up a database There’s a lot of different database software that can store data for your site. We’ll use the default one, sqlite3.
+This is already set up in this part of your mysite/settings.py file:
+DATABASES = { &#34;default&#34;: { &#34;ENGINE&#34;: &#34;django.db.backends.sqlite3&#34;, &#34;NAME&#34;: BASE_DIR / &#34;db.sqlite3&#34;, } } To create a database for our app, let’s run the following in the console: python manage.py migrate (we need to be in the bakery_site directory that contains the manage.py file). If your server is still running, press Control &#43; C to stop it to run the next command.">
+    <meta itemprop="wordCount" content="1721">
+    <title>6. She&#39;s a Model :: She Codes One Day Workshop Tutorials (new)</title>
+    <link href="/python/python/06_shes_a_model/index.xml" rel="alternate" type="application/rss+xml" title="6. She&#39;s a Model :: She Codes One Day Workshop Tutorials (new)">
+    <link href="/images/logo.png?1751534132" rel="icon" type="image/png">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751534132" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751534132" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1751534132" rel="stylesheet">
+    <link href="/css/theme.css?1751534132" rel="stylesheet">
+    <link href="/css/format-html.css?1751534132" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1751534132" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1751534132" defer></script>
+    <script src="/js/lunr/lunr.min.js?1751534132" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1751534132" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1751534132" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1751534132" defer></script>
+    <script src="/js/search.js?1751534132" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/python\/python\/06_shes_a_model\/index.html';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['en'];
+      window.relearn.index_js_url="/searchindex.en.js?1751534132";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'relearn-light', 'relearn-dark' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/python/python/06_shes_a_model/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#set-up-a-database">Set up a database</a></li>
+    <li><a href="#django-models">Django Models</a>
+      <ul>
+        <li><a href="#objects">Objects</a></li>
+      </ul>
+    </li>
+    <li><a href="#building-out-our-models">Building out our models</a>
+      <ul>
+        <li><a href="#creating-a-bakery-model">Creating a Bakery model</a></li>
+        <li><a href="#creating-an-item-model">Creating an Item model</a></li>
+      </ul>
+    </li>
+    <li><a href="#create-tables-for-models-in-your-database">Create tables for models in your database</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">She Codes One Day Workshop Tutorials (new)</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/python/index.html"><span itemprop="name">Python 101</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">6. She&#39;s a Model</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/python/python/05_fake_it_til_you_bake_it/index.html" title="5. Fake it til you Bake it (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/python/python/07_django_admin/index.html" title="7. Django Admin (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable python" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="6-shes-a-model">6. She&#39;s a Model</h1>
+
+<p>So we&rsquo;ve got a page but its all hardcoded and manual. That&rsquo;s no fun, we want dynamic data. Let&rsquo;s start by getting ourselves a database to store that data in.</p>
+<h2 id="set-up-a-database">Set up a database</h2>
+<p>There&rsquo;s a lot of different database software that can store data for your site. We&rsquo;ll use the default one, <code>sqlite3</code>.</p>
+<p>This is already set up in this part of your <code>mysite/settings.py</code> file:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>DATABASES <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;default&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ENGINE&#34;</span>: <span style="color:#e6db74">&#34;django.db.backends.sqlite3&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;NAME&#34;</span>: BASE_DIR <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;db.sqlite3&#34;</span>,
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>To create a database for our app, let&rsquo;s run the following in the console: <code>python manage.py migrate</code> (we need to be in the <code>bakery_site</code> directory that contains the <code>manage.py</code> file). If your server is still running, press Control + C to stop it to run the next command.</p>
+<p>If that goes well, you should see something like this:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>(myvenv)  bakery_site% python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK</code></pre></div>
+<p>And we&rsquo;re done! Time to start the web server and see if our website is working! See if you remember it from earlier&hellip;</p>
+<h2 id="django-models">Django Models</h2>
+<p>What we want to create is something that will store all the details about local bakeries and their scrumptious offerings in our bakery_project app. But to be able to do that, we need to talk a little bit about a concept in programming called <code>objects</code>.</p>
+<h3 id="objects">Objects</h3>
+<p>In programming, there’s a powerful concept called object-oriented programming. Instead of writing a long list of instructions, we can structure our code to model real-world things and how they interact — just like objects in real life.</p>
+<p>So, what is an object? Think of it as a bundle of properties (descriptions) and actions (things it can do).</p>
+<p>We want to build something that helps people discover amazing local bakeries and their delicious treats.</p>
+<p>To do that, we need to model our world using objects:</p>
+<p>What are the key properties of a Bakery?</p>
+<p>What is a BakeryItem, and what should it include?</p>
+<p>Let’s start thinking like object-oriented programmers:
+What data do we need to describe a bakery or a baked good?
+What actions might they have?</p>
+<p>For example, a Bakery should have:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>Bakery
+-------
+name: The bakery&#39;s name.
+address: Where the bakery is located.
+cuisine: The type of baked goods or specialties it offers.
+rating: A rating to help users gauge quality.
+image: An optional image URL representing the bakery.</code></pre></div>
+<p>And an Item produced by the bakery should include:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>Item
+-------
+bakery: A reference to the bakery it belongs to.
+name: The name of the baked good (like &#34;Chocolate Croissant&#34; or &#34;Sourdough Bread&#34;).
+price: How much the item costs.
+image: An optional image URL of the item.</code></pre></div>
+<p>What kind of things could be done with these models? It would be very useful to have a method that returns a human-readable description of each instance. In Django, this is typically done using the <code>__str__</code> method. By defining this method, you ensure that when a Bakery or Item object is converted to a string, it provides a clear and concise representation (usually the name).</p>
+<p>Let&rsquo;s start modeling it in Django!</p>
+<h2 id="building-out-our-models">Building out our models</h2>
+<p>Now that we understand what an object is, we can use that knowledge to create a Django model for our bakery and another for its items.</p>
+<p>In Django, a model is a special type of object that gets saved to a &lsquo;database&rsquo;. A database is simply a structured collection of data — it’s where you’ll store information about users, bakeries, their baked goods, and more.</p>
+<p>For this project, we’ll be using a SQLite database, which is Django’s default option. It’s lightweight and perfect for what we need right now.</p>
+<p>You can imagine a model like a spreadsheet:</p>
+<p>The columns represent the fields or attributes (like name, price, or location),</p>
+<p>And each row is a single record — one bakery, one item, etc.</p>
+<p>Each model in Django becomes a table in the database, and the cool part is: models can be connected to each other! So a bakery can have many bakery items, and each item can belong to a specific bakery.</p>
+<h3 id="creating-a-bakery-model">Creating a Bakery model</h3>
+<p>In the <code>bakeries/models.py</code> file we define all objects called <code>Models</code> – this is a place in which we will define our bakery data models.</p>
+<p>Let&rsquo;s open <code>bakeries/models.py</code> in the code editor, remove everything from it, and write code like this:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.db <span style="color:#f92672">import</span> models
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Bakery</span>(models<span style="color:#f92672">.</span>Model):
+</span></span><span style="display:flex;"><span>    name <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">255</span>)
+</span></span><span style="display:flex;"><span>    address <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>TextField()
+</span></span><span style="display:flex;"><span>    cuisine <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">255</span>)
+</span></span><span style="display:flex;"><span>    rating <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>IntegerField()
+</span></span><span style="display:flex;"><span>    image <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>URLField(null<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, blank<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__str__</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>name</span></span></code></pre></div>
+
+<details open class=" box cstyle notices info">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-info-circle"></i> 
+    Info
+  </summary>
+  <div class="box-content">
+<p>Double-check that you use two underscore characters (<code>_</code>) on each side of <code>str</code>. This convention is used frequently in Python and they have a fun name &ldquo;dunder&rdquo; (short for &ldquo;double-underscore&rdquo;).</p>
+  </div>
+</details>
+<p>Let&rsquo;s break that down a bit.</p>
+<p>The line starting with <code>from</code> or <code>import</code> is a line that add some bits from other files. So instead of copying and pasting the same things in every file, we can include some parts with <code>from ... import ...</code>.</p>
+<p><code>class Bakery(models.Model)</code> – this line defines our model (it is an <code>object</code>).</p>
+<ul>
+<li><code>class</code> is a special keyword that indicates that we are defining an object.</li>
+<li><code>Bakery</code> is the name of our model. We can give it a different name (but we must avoid special characters and whitespace). Always start a class name with an uppercase letter.</li>
+<li><code>models.Model</code> means that the Bakery is a Django Model, so Django knows that it should be saved in the database.</li>
+</ul>
+<p>Now we define the properties we were talking about: <code>name</code>, <code>address</code>, <code>cuisine</code>, <code>rating</code> and <code>image</code>. To do that we need to define the type of each field (Is it text? A number? A date? A relation to another object, like a User?)</p>
+<ul>
+<li><code>models.CharField</code> – this is how you define text with a limited number of characters.</li>
+<li><code>models.TextField</code> – this is for long text without a limit. Sounds ideal for address content, right?</li>
+<li><code>models.IntegerField</code> – this is for storing whole numbers.</li>
+<li><code>models.URLField</code> – this is for storing image URLs.</li>
+</ul>
+<p>Methods often <code>return</code> something. There is an example of that in the <code>__str__</code> method. In this scenario, when we call <code>__str__()</code> we will get a text (<strong>string</strong>) with a Bakery name.</p>
+<p>Also notice <code>def __str__(self):</code> is indented. Because Python is sensitive to whitespace, we need to indent our methods inside the class. Otherwise, the methods won&rsquo;t belong to the class, and you can get some unexpected behavior.</p>
+<p>If you are curious about the rest of built-in Django from what we&rsquo;ve done so far, have a look at Django&rsquo;s <a href="https://docs.djangoproject.com/en/5.1/ref/models/fields/#field-types" rel="external" target="_blank">documentation</a>.</p>
+<h3 id="creating-an-item-model">Creating an Item model</h3>
+<p>Now let&rsquo;s define our <code>Item</code> model, which represents the baked goods offered by each bakery. Just below your Bakery model (at the very bottom of your code) in <code>bakeries/models.py</code> file, add the following code:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Item</span>(models<span style="color:#f92672">.</span>Model):
+</span></span><span style="display:flex;"><span>    bakery <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ForeignKey(Bakery, on_delete<span style="color:#f92672">=</span>models<span style="color:#f92672">.</span>CASCADE)
+</span></span><span style="display:flex;"><span>    name <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">255</span>)
+</span></span><span style="display:flex;"><span>    price <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>FloatField()
+</span></span><span style="display:flex;"><span>    image <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>URLField(null<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, blank<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__str__</span>(self):
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>name</span></span></code></pre></div>
+<p>When we write: class Item(models.Model) we’re defining a model called Item. This is how we tell Django: &ldquo;Hey, I want to create something called an Item and store it in the database.&rdquo;</p>
+<p>The bit in brackets - models.Model – means that Item is inheriting from Django’s built-in Model class. That’s just a fancy way of saying:
+“Make this a Django model with all the features needed to connect to the database.”</p>
+<p>Thanks to this, Django knows to create a database table for Item. Each time we create a new item (like a croissant or cupcake), Django will save it as a row in the Item table.</p>
+<p>So if you’ve already created a model for your Bakery as well, you now have two tables in your database:</p>
+<p>One for <code>Bakery</code></p>
+<p>One for <code>Item</code></p>
+<p>Each model = one table. Each instance (object) = one row.</p>
+<p>We just defined the properties of an <code>Item</code> such as: <code>bakery</code>, <code>name</code>, <code>price</code> and <code>image</code>. To do that we defined the type of each field (Is it text? A number? A relation to another object?). This is exactly the same way we made our <code>Bakery</code> model.</p>
+<p>Let&rsquo;s find out what&rsquo;s new here.</p>
+<ul>
+<li><code>models.ForeignKey(Bakery, on_delete=models.CASCADE)</code> – This field creates a relationship between each Item and a Bakery. The on_delete=models.CASCADE argument means that if a bakery is deleted, all associated items will also be removed from the database. That makes sense, we wouldn&rsquo;t want to find the croissant of our dreams only to find out that bakery closed down in 2003!</li>
+<li><code>models.FloatField</code> – This field stores the price of the item as a floating-point number, allowing for decimals. This way our data will show up in dollars and cents, like we might be used to seeing at shops.</li>
+</ul>
+<p>We are using a <code>__str__</code> method again. In this scenario, when we call <code>__str__()</code> we will get a text (<strong>string</strong>) with an Item name.</p>
+<p>If something is still not clear about models, feel free to ask one of the mentors! Spot the purple shirt? Hands up now! We know its a lot to take in but you should be super proud of yourself. Hopefully it looks slightly less magic for you now.</p>
+<h2 id="create-tables-for-models-in-your-database">Create tables for models in your database</h2>
+<p>The last step here is to add our new models to our database. First we have to make Django know that we have some changes in our models (we have just created it!). Go to your console window and type <code>python manage.py makemigrations bakeries</code>. It will look like this:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>(myvenv) bakery_site% python manage.py makemigrations bakeries
+Migrations for &#39;bakeries&#39;:
+  bakeries/migrations/0001_initial.py
+    + Create model Bakery
+    + Create model Item</code></pre></div>
+
+<details open class=" box cstyle notices info">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-info-circle"></i> 
+    Info
+  </summary>
+  <div class="box-content">
+<p><strong>Note:</strong> Remember to save the files you edit. Otherwise, your computer will execute the previous version which might give you unexpected error messages.</p>
+  </div>
+</details>
+<p>Django prepared a migration file for us that we now have to apply to our database. Type <code>python manage.py migrate bakeries</code> and the output should be as follows:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>(myvenv) ~/bakery_site$ python manage.py migrate bakeries
+Operations to perform:
+  Apply all migrations: bakeries
+Running migrations:
+  Applying bakeries.0001_initial... OK</code></pre></div>
+<p>Hurray! Our models are now in our database! It would be nice to see it, right? Jump to the next chapter to see what your models looks like!</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="R-logo" href="/index.html">
+  <img src="/images/logo.png" alt="brand logo">
+</a>
+        </div>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="parent " data-nav-id="/python/index.html"><a class="padding" href="/python/index.html">Python 101</a><ul id="R-subsections-e59a306ea2eb42b73261573b05085bcc" class="collapsible-menu">
+            <li class="" data-nav-id="/python/python/01_turtles/index.html"><a class="padding" href="/python/python/01_turtles/index.html">1. Our first Python Turtle</a></li>
+            <li class="" data-nav-id="/python/python/02_hello_world/index.html"><a class="padding" href="/python/python/02_hello_world/index.html">2. Hello World</a></li>
+            <li class="alwaysopen " data-nav-id="/python/python/03_getting_python_on_your_machine/index.html"><a class="padding" href="/python/python/03_getting_python_on_your_machine/index.html">3. Getting Python on Your Machine</a><ul id="R-subsections-aeb560072527de4ef550cbc6ff08f309" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/python/python/04_lets_get_appy/index.html"><a class="padding" href="/python/python/04_lets_get_appy/index.html">4. Let&#39;s Get Appy!</a></li>
+            <li class="" data-nav-id="/python/python/05_fake_it_til_you_bake_it/index.html"><a class="padding" href="/python/python/05_fake_it_til_you_bake_it/index.html">5. Fake it til you Bake it</a></li>
+            <li class="active " data-nav-id="/python/python/06_shes_a_model/index.html"><a class="padding" href="/python/python/06_shes_a_model/index.html">6. She&#39;s a Model</a></li>
+            <li class="" data-nav-id="/python/python/07_django_admin/index.html"><a class="padding" href="/python/python/07_django_admin/index.html">7. Django Admin</a></li>
+            <li class="" data-nav-id="/python/python/08_thats_a_wrap/index.html"><a class="padding" href="/python/python/08_thats_a_wrap/index.html">8. Make It Dynamic</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-variant">Theme</label>
+                  <select id="R-select-variant">
+                    <option id="R-select-variant-relearn-light" value="relearn-light" selected>Relearn Light</option>
+                    <option id="R-select-variant-relearn-dark" value="relearn-dark">Relearn Dark</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.relearn.markVariant();</script>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/clipboard/clipboard.min.js?1751534132" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1751534132" defer></script>
+    <script src="/js/theme.js?1751534132" defer></script>
+  </body>
+</html>

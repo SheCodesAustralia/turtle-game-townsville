@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1. Our first Python Turtle :: She Codes One Day Workshop Tutorials (new)</title>
+    <link>http://localhost:1313/python/python/01_turtles/index.html</link>
+    <description>Let’s get into our first bit of Python. Who’s played with a spirograph before - drawing circles or lines over and over again to make pretty geometric patterns?&#xA;We’re going to learn how to Python by building our own simple script to make a shape.&#xA;Start by heading over to Python Sandbox.&#xA;Let’s start off by running the script that is already in there. It should look like this:</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <atom:link href="http://localhost:1313/python/python/01_turtles/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

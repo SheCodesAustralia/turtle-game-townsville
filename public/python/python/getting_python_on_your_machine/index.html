@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-au" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.147.9">
+    <meta name="generator" content="Relearn 7.6.1+4407b4364ab6f7477f7671fbd20c0494bade40ee">
+    <meta name="description" content="The first step to create our Bakery Finder app is to start a new Django project. Django has some magic meaning that when we run some scripts, Django will create the skeleton of a Django project for us! The skeleton is a bunch of files that we will explain as we go.
+Naming of these files and directories are very important. Django needs to maintain a certain structure to be able to find important bits of information. If they are renamed or moved, it might get confused or throw some unexpected errors. As such, you shouldn’t rename the files that we are about to create, or move them around.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="3. Your First Django Project :: She Codes One Day Workshop Tutorials (new)">
+    <meta name="twitter:description" content="The first step to create our Bakery Finder app is to start a new Django project. Django has some magic meaning that when we run some scripts, Django will create the skeleton of a Django project for us! The skeleton is a bunch of files that we will explain as we go.
+Naming of these files and directories are very important. Django needs to maintain a certain structure to be able to find important bits of information. If they are renamed or moved, it might get confused or throw some unexpected errors. As such, you shouldn’t rename the files that we are about to create, or move them around.">
+    <meta property="og:url" content="http://localhost:1313/python/python/getting_python_on_your_machine/index.html">
+    <meta property="og:site_name" content="She Codes One Day Workshop Tutorials (new)">
+    <meta property="og:title" content="3. Your First Django Project :: She Codes One Day Workshop Tutorials (new)">
+    <meta property="og:description" content="The first step to create our Bakery Finder app is to start a new Django project. Django has some magic meaning that when we run some scripts, Django will create the skeleton of a Django project for us! The skeleton is a bunch of files that we will explain as we go.
+Naming of these files and directories are very important. Django needs to maintain a certain structure to be able to find important bits of information. If they are renamed or moved, it might get confused or throw some unexpected errors. As such, you shouldn’t rename the files that we are about to create, or move them around.">
+    <meta property="og:locale" content="en_au">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="3. Your First Django Project :: She Codes One Day Workshop Tutorials (new)">
+    <meta itemprop="description" content="The first step to create our Bakery Finder app is to start a new Django project. Django has some magic meaning that when we run some scripts, Django will create the skeleton of a Django project for us! The skeleton is a bunch of files that we will explain as we go.
+Naming of these files and directories are very important. Django needs to maintain a certain structure to be able to find important bits of information. If they are renamed or moved, it might get confused or throw some unexpected errors. As such, you shouldn’t rename the files that we are about to create, or move them around.">
+    <meta itemprop="datePublished" content="2021-02-04T20:02:00+08:00">
+    <meta itemprop="dateModified" content="2021-02-04T20:02:00+08:00">
+    <meta itemprop="wordCount" content="781">
+    <title>3. Your First Django Project :: She Codes One Day Workshop Tutorials (new)</title>
+    <link href="/python/python/getting_python_on_your_machine/index.xml" rel="alternate" type="application/rss+xml" title="3. Your First Django Project :: She Codes One Day Workshop Tutorials (new)">
+    <link href="/images/logo.png?1751439318" rel="icon" type="image/png">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751439318" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751439318" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1751439318" rel="stylesheet">
+    <link href="/css/theme.css?1751439318" rel="stylesheet">
+    <link href="/css/format-html.css?1751439318" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1751439318" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1751439318" defer></script>
+    <script src="/js/lunr/lunr.min.js?1751439318" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1751439318" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1751439318" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1751439318" defer></script>
+    <script src="/js/search.js?1751439318" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/python\/python\/getting_python_on_your_machine\/index.html';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['en'];
+      window.relearn.index_js_url="/searchindex.en.js?1751439318";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'relearn-light', 'relearn-dark' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/python/python/getting_python_on_your_machine/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#create-project">Create Project</a></li>
+    <li><a href="#understanding-your-project-structure">Understanding Your Project Structure</a>
+      <ul>
+        <li><a href="#lets-run-it">Let&rsquo;s run it!</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">She Codes One Day Workshop Tutorials (new)</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/python/index.html"><span itemprop="name">Python 101</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">3. Your First Django Project</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/python/python/02_hello_world/index.html" title="2. Hello World (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/python/python/getting_python_on_your_machine/1_python_installation/index.html" title="Python installation (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable python" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="3-your-first-django-project">3. Your First Django Project</h1>
+
+<p>The first step to create our Bakery Finder app is to start a new Django project. Django has some magic meaning that when we run some scripts, Django will create the skeleton of a Django project for us! The skeleton is a bunch of files that we will explain as we go.</p>
+<p>Naming of these files and directories are very important. Django needs to maintain a certain structure to be able to find important bits of information. If they are renamed or moved, it might get confused or throw some unexpected errors. As such, you shouldn&rsquo;t rename the files that we are about to create, or move them around.</p>
+<p>Ready to get going?</p>
+
+<details open class=" box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Note
+  </summary>
+  <div class="box-content">
+<p>Remember to run everything in the virtualenv. If you don&rsquo;t see a prefix <code>(myvenv)</code> in your console, you need to activate your virtualenv. Feel free to flick back to the installation section for a refresher on what it is. Typing <code>myvenv\Scripts\activate</code> on Windows or
+<code>source myvenv/bin/activate</code> on MacOS or Linux will do this for you.</p>
+  </div>
+</details>
+<h2 id="create-project">Create Project</h2>
+<div class="tab-panel" data-tab-group="a">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="macoslinux"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('a','macoslinux')"
+    >
+      <span class="tab-nav-text"><em><strong>MacOS/Linux</strong></em></span>
+    </button>
+    <button
+      data-tab-item="windows"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('a','windows')"
+    >
+      <span class="tab-nav-text"><em><strong>Windows</strong></em></span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="macoslinux"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<p>In your macOS or Linux console, run the following command. Don’t forget to add the period (or dot) <code>.</code> at the end! The period <code>.</code> is essential because it tells the script to install Django in your current directory (fun fact: the period <code>.</code> is a short-hand reference).</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>(myvenv) bakery_site% django-admin startproject bakery_project .</code></pre></div>
+      </div>
+    </div>
+    <div
+      data-tab-item="windows"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<p>On your Windows terminal, run the following command. Don’t forget to add the period (or dot) <code>.</code> at the end! The period <code>.</code> is essential because it tells the script to install Django in your current directory (fun fact: the period <code>.</code> is a short-hand reference).</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>(myvenv) C:\Users\Name\bakery_site django-admin.exe startproject bakery_project .</code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<details open class=" box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Note
+  </summary>
+  <div class="box-content">
+<p>When typing the command above, remember that you only type the part which starts with django-admin. The <code>(myvenv) ~/bakery_site$</code> part shown here is just example of what your command line will be showing, waiting for your instructions. Yours may look different if your file is called something different or based on the settings on your device. If you&rsquo;re unsure - check in with a mentor!</p>
+  </div>
+</details>
+<h2 id="understanding-your-project-structure">Understanding Your Project Structure</h2>
+<p><code>django-admin.py</code> is a script that will create the directories and files for you. You should now have a directory structure which looks like this:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>bakery_site
+├── manage.py
+├── bakery_project
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── myvenv
+│   └── ...
+└── requirements.txt</code></pre></div>
+
+<details open class=" box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Note
+  </summary>
+  <div class="box-content">
+<p>In your directory structure, you will also see your <code>myvenv</code> directory that we created before.</p>
+  </div>
+</details>
+<p>Lets walk through what some of these files are.</p>
+<p>The <code>manage.py</code> is a script that helps with management of the site. One of the things this file lets us do is to start a web server on our computer without installing anything else.</p>
+<p>The <code>settings.py</code> file contains the configuration of your website, much like your settings app on your phone or laptop.</p>
+<p>Remember when we talked about letters earlier? The <code>urls.py</code> file is like an address book, so we can write different letters to different people, with personalised content. There&rsquo;s a little thing called the &lsquo;urlresolver&rsquo; that&rsquo;s going to help us with that down the track.</p>
+<p>We can ignore the other files for now as we won&rsquo;t change them - the only thing to remember is not to delete them by accident!</p>
+<h3 id="lets-run-it">Let&rsquo;s run it!</h3>
+<p>Before we get too carried away, lets check your Django project works. You need to be in the directory that contains the <code>manage.py</code> file (the <code>bakery_site</code> directory). In the console, we can start the web server by running <code>python manage.py runserver</code>:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>(myvenv) bakery_site% python manage.py runserver</code></pre></div>
+<p>If you are on Windows and this fails with <code>UnicodeDecodeError</code>, use this command instead:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>(myvenv) bakery_site% python manage.py runserver 0:8000</code></pre></div>
+<p>Now you need to check that your website is running. Open your browser ( eg Firefox, Chrome, Safari etc) and enter this address:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>http://127.0.0.1:8000/</code></pre></div>
+<p>You can open this in another browser window and you should see the Django install worked page.</p>
+<p>Congratulations! You&rsquo;ve just created your first website and run it using a web server! Isn&rsquo;t that awesome?</p>
+<p><a href="#R-image-21dfa9522690e232a340a8ce97eaf21b" class="lightbox-link"><img alt="Install worked!" class="lazy lightbox figure-image" loading="lazy" src="/python/python/getting_python_on_your_machine/images/install_worked.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-21dfa9522690e232a340a8ce97eaf21b"><img alt="Install worked!" class="lazy lightbox lightbox-image" loading="lazy" src="/python/python/getting_python_on_your_machine/images/install_worked.png"></a></p>
+<p>Note that a command window can only run one thing at a time, and the command window you opened earlier is running the web server. As long as the web server is running and waiting for additional incoming requests, the terminal will accept new text but will not execute new commands.</p>
+<p>To type additional commands while the web server is running, open a new terminal window and activate your virtualenv. To stop the web server, switch back to the window in which it&rsquo;s running and press CTRL+C (Control and C keys together). Psst, if that doesn&rsquo;t work on Windows, you might have to press Ctrl+Break.</p>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Feb 4, 2021
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="R-logo" href="/index.html">
+  <img src="/images/logo.png" alt="brand logo">
+</a>
+        </div>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="parent " data-nav-id="/python/index.html"><a class="padding" href="/python/index.html">Python 101</a><ul id="R-subsections-e59a306ea2eb42b73261573b05085bcc" class="collapsible-menu">
+            <li class="" data-nav-id="/python/python/01_turtles/index.html"><a class="padding" href="/python/python/01_turtles/index.html">1. Our first Python Turtle</a></li>
+            <li class="" data-nav-id="/python/python/02_hello_world/index.html"><a class="padding" href="/python/python/02_hello_world/index.html">2. Hello World</a></li>
+            <li class="active parent alwaysopen " data-nav-id="/python/python/getting_python_on_your_machine/index.html"><a class="padding" href="/python/python/getting_python_on_your_machine/index.html">3. Your First Django Project</a><ul id="R-subsections-069d58cc85fa132f6881b30eabb65fbe" class="collapsible-menu">
+            <li class="" data-nav-id="/python/python/getting_python_on_your_machine/1_python_installation/index.html"><a class="padding" href="/python/python/getting_python_on_your_machine/1_python_installation/index.html"><b>1. </b>Python installation</a></li>
+            <li class="" data-nav-id="/python/python/getting_python_on_your_machine/2_code_editor/index.html"><a class="padding" href="/python/python/getting_python_on_your_machine/2_code_editor/index.html"><b>2. </b>Code Editor</a></li></ul></li>
+            <li class="" data-nav-id="/python/python/04_lets_get_appy/index.html"><a class="padding" href="/python/python/04_lets_get_appy/index.html">4. Let&#39;s Get Appy!</a></li>
+            <li class="" data-nav-id="/python/python/05_fake_it_til_you_bake_it/index.html"><a class="padding" href="/python/python/05_fake_it_til_you_bake_it/index.html">5. Fake it til you Bake it</a></li>
+            <li class="" data-nav-id="/python/python/06_shes_a_model/index.html"><a class="padding" href="/python/python/06_shes_a_model/index.html">6. She&#39;s a Model</a></li>
+            <li class="" data-nav-id="/python/python/07_django_admin/index.html"><a class="padding" href="/python/python/07_django_admin/index.html">7. Django Admin</a></li>
+            <li class="" data-nav-id="/python/python/08_make_it_dynamic/index.html"><a class="padding" href="/python/python/08_make_it_dynamic/index.html">8. Make It Dynamic</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-variant">Theme</label>
+                  <select id="R-select-variant">
+                    <option id="R-select-variant-relearn-light" value="relearn-light" selected>Relearn Light</option>
+                    <option id="R-select-variant-relearn-dark" value="relearn-dark">Relearn Dark</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.relearn.markVariant();</script>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/clipboard/clipboard.min.js?1751439318" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1751439318" defer></script>
+    <script src="/js/theme.js?1751439318" defer></script>
+  </body>
+</html>
