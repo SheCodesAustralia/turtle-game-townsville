@@ -1,5 +1,5 @@
 +++
-title = "Python 101"
+title = "Let's Learn Python"
 type = "chapter"
 weight = 1
 +++
